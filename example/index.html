@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PostIt</title>
+	</head>
+
+	<body>
+		<button id="postIt">PostIt</button>
+
+		<!-- Scripts -->
+		<script src="../dist/postit.js"></script>
+		<script>
+			(function() {
+				'use strict';
+
+				/**
+				 * @note Always specify an exact target `origin`, not `*`, when you use `.postMessage` to send data to other windows.
+				 * Also, an `event.origin` check is always a secure choice.
+				 */
+
+				({
+					init: function () {
+						var that = this;
+
+						that.elems = {
+							postIt: document.getElementById('postIt')
+						};
+
+						that.buttonProperties = {
+							colors: ['red', 'blue', 'green']
+						};
+
+						PostIt.add('foo');
+						that.listeners();
+					},
+
+					listeners: function () {
+						var that = this;
+
+						PostIt
+							.on('foo', 'foo.bar', that.updateFooBar.bind(that))
+							.on('foo', 'foo.baz', that.updateFooBaz.bind(that));
+
+							that.elems.postIt.addEventListener('click', that.openWindow, false);
+					},
+
+					emitEvent: function (options) {
+						PostIt.emit(options.id, options.event, options.target, options.message, options.origin);
+					},
+
+					logEvent: function () {
+						console.log.apply(console, arguments);
+					},
+
+					updateFooBar: function (event) {
+						var that = this;
+
+						/**
+						 * Do we trust the sender of this message?
+						 * Ensure to add the `event.origin` URL check
+						 * for security. For more information, see:
+						 * https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+						 * if (event.origin !== 'http://foo.com') {
+						 *   return
+						 * }
+						 */
+
+						that.updateButton();
+						that.logEvent('[foo.bar]', event.dataParsed);
+					},
+
+					updateFooBaz: function (event) {
+						var that = this;
+
+						/**
+						 * Do we trust the sender of this message?
+						 * Ensure to add the `event.origin` URL check
+						 * for security. For more information, see:
+						 * https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+						 * if (event.origin !== 'http://foo.com') {
+						 *   return
+						 * }
+						 */
+
+						that.logEvent('[foo.baz]', event.dataParsed);
+						that.emitEvent({
+							id: 'foo',
+							event: 'foo.baz',
+							target: event.source,
+							message: { color: that.buttonProperties.colors[0] },
+							origin: '*'
+						});
+					},
+
+					updateButton: function () {
+						var that = this;
+						var color = that.buttonProperties.colors.pop();
+
+						that.buttonProperties.colors.unshift(color);
+
+						that.elems.postIt.style.background = color;
+					},
+
+					openWindow: function (options) {
+						PostIt.openWindow({
+							url: 'window.html',
+							title: 'foo',
+							width: 700,
+							height: 500
+						});
+					}
+				}).init();
+			})();
+		</script>
+	</body>
+</html>

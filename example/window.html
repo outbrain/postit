@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PostIt</title>
+	</head>
+
+	<body>
+		<button id="postIt">PostIt</button>
+
+		<!-- Scripts -->
+		<script src="../dist/postit.js"></script>
+		<script>
+			(function() {
+				'use strict';
+
+				/**
+				 * @note Always specify an exact target `origin`, not `*`, when you use `.postMessage` to send data to other windows.
+				 * Also, an `event.origin` check is always a secure choice.
+				 */
+
+				({
+					init: function () {
+						var that = this;
+
+						that.elems = {
+							postIt: document.getElementById('postIt')
+						};
+
+						PostIt.add('foo');
+						that.listeners();
+					},
+
+					listeners: function () {
+						var that = this;
+
+						that.elems.postIt.addEventListener('click', function () {
+							that.emitEvent({
+								id: 'foo',
+								event: 'foo.bar',
+								target: window.parent.opener,
+								message: { foo: 'bar' },
+								origin: '*'
+							});
+
+							window.close();
+						}, false);
+
+						PostIt.on('foo', 'foo.baz', that.updateButton.bind(that));
+
+						window.addEventListener('load', that.emitEvent.bind(that, {
+							id: 'foo',
+							event: 'foo.baz',
+							target: window.parent.opener,
+							message: 'hi',
+							origin: '*'
+						}), false);
+					},
+
+					emitEvent: function (options) {
+						PostIt.emit(options.id, options.event, options.target, options.message, options.origin);
+					},
+
+					updateButton: function (event) {
+						/**
+						 * Do we trust the sender of this message?
+						 * Ensure to add the `event.origin` URL check
+						 * for security. For more information, see:
+						 * https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+						 * if (event.origin !== 'http://foo.com') {
+						 *   return
+						 * }
+						 */
+
+						this.elems.postIt.style.background = event.dataParsed.color;
+					}
+				}).init();
+			})();
+		</script>
+	</body>
+</html>

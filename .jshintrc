@@ -1,0 +1,19 @@
+{
+  "curly": true,
+  "maxcomplexity": 15,
+  "latedef": false,
+  "noarg": true,
+  "noempty": true,
+  "strict": true,
+  "undef": true,
+  "quotmark": "single",
+  "loopfunc": true,
+  "node": true,
+  "browser": true,
+  "eqnull": true,
+  "boss": true,
+  "expr": true,
+  "esnext": true,
+  "mocha": true,
+  "predef": ["expect", "sinon"]
+}
