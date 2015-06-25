@@ -21,7 +21,7 @@ $ npm install
 
 ## Testing
 
-Run Unit Tests/JSHint Tests.
+Run Unit Tests/JSHint.
 
 ```bash
 # Unit Tests
@@ -164,13 +164,13 @@ PostIt.openWindow({
 
 To view the internal docs, primarily targeted for contributors, visit [contributor docs](docs/contributor).
 
-## Run PostIt in the Browser
+## Run PostIt in a Browser
 
 Use [`dist/postit.js`](dist/postit.js).
 
-```javascript
+```html
 <script src="path/to/postit.js"></script>
-<!-- PostIt is now in the global context -->
+<!-- `PostIt` is now in the global context. -->
 ```
 
 ## Versioning

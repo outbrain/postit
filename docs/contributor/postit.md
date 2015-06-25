@@ -16,7 +16,7 @@ PostIt Module.
 
 | Param | Type |
 | --- | --- |
-| id | <code>number</code> | 
+| id | <code>string</code> | 
 
 <a name="PostIt+on"></a>
 ### postIt.on(event, listener) ⇒ <code>object</code>
@@ -53,6 +53,6 @@ Emits `message` events, using the client's `.postMessage` emitter.
 | --- | --- |
 | event | <code>string</code> | 
 | target | <code>node</code> | 
-| message | <code>string</code> | 
+| message | <code>string</code> &#124; <code>array</code> &#124; <code>object</code> | 
 | origin | <code>string</code> | 
 

@@ -18,7 +18,7 @@ Manager Module.
 
 <a name="Manager.__records"></a>
 ### Manager.__records
-Accesses the Manager's records.
+Exposes the Manager's records.
 
 **Kind**: static property of <code>[Manager](#Manager)</code>  
 **Access:** public  

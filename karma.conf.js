@@ -25,7 +25,7 @@ module.exports = function (config) {
     exclude: [],
 
     // Preprocess matching files before serving them to the browser.
-    // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor.
+    // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'lib/**/!(*.unit).js': ['commonjs', 'coverage'],
       'lib/**/*.unit.js': ['commonjs']

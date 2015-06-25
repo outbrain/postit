@@ -30,8 +30,8 @@ Merges a shallow `source` object into the `destination` object.
 
 | Param | Type |
 | --- | --- |
-| destination | <code>string</code> | 
-| source | <code>string</code> | 
+| destination | <code>object</code> | 
+| source | <code>object</code> | 
 
 <a name="helpers.openWindow"></a>
 ### helpers.openWindow(options) ⇒ <code>object</code>
