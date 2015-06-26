@@ -34,6 +34,14 @@ $ npm run test:jshint
 $ npm test
 ```
 
+## Contributor API Docs
+
+Create Contributor API Docs.
+
+```bash
+$ npm run docs
+```
+
 ## Deploy
 
 Executes all necessary tasks for deploying code (`test`, `dist` and `docs`).
@@ -162,7 +170,9 @@ PostIt.openWindow({
 });
 ```
 
-To view the internal docs, primarily targeted for contributors, visit [contributor docs](docs/contributor).
+## Contributing to PostIt
+
+[Contributor Docs](docs/contributor).
 
 ## Run PostIt in a Browser
 
@@ -172,6 +182,10 @@ Use [`dist/postit.js`](dist/postit.js).
 <script src="path/to/postit.js"></script>
 <!-- `PostIt` is now in the global context. -->
 ```
+
+## Changelog
+
+[Changelog](Changelog.md)
 
 ## Versioning
 

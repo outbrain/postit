@@ -75,8 +75,8 @@ gulp.task('dist', function () {
 
 // Create contributor `docs`.
 gulp.task('docs', function () {
-	// Delete the current `docs` files.
-	del.sync('docs/**');
+	// Delete the current `docs/contributor/api` files.
+	del.sync('docs/contributor/api/**');
 
 	gulp.src(glob.docs)
 		.pipe(gulpJsdoc2md())
@@ -86,7 +86,7 @@ gulp.task('docs', function () {
 		.pipe(rename(function (path) {
 			path.extname = '.md';
 		}))
-		.pipe(gulp.dest('docs/contributor'));
+		.pipe(gulp.dest('docs/contributor/api'));
 });
 
 // Build.
