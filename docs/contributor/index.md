@@ -68,4 +68,4 @@ Please adhere to the current style conventions. JSHint will catch most of the pr
 
 ### Contributor API Docs
 
-[Contributor API Docs](docs/contributor)
+[Contributor API Docs](api)
