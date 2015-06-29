@@ -172,7 +172,7 @@ PostIt.openWindow({
 
 ## Contributing to PostIt
 
-[Contributor Docs](docs/contributor).
+[Contributor Docs](docs/contributor/index.md)
 
 ## Run PostIt in a Browser
 

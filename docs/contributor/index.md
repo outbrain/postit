@@ -55,12 +55,17 @@ $ npm run deploy
 
 ## Browser Support
 
-|  Latest | Specific             |
-|:-------:|----------------------|
-| Chrome  | Internet Explorer 9+ |
-| Firefox |                      |
-| Safari  |                      |
+|      Browser      | Version |
+|:-----------------:|---------|
+| Chrome            | Latest  |
+| Firefox           | Latest  |
+| Safari            | Latest  |
+| Internet Explorer | 9+      |
 
-# Coding Guidelines
+## Coding Guidelines
 
-Please adhere to the current style conventions. JSHint will catch most of the problematic issues that could occur, syntactically.
+Please adhere to the current style conventions. JSHint will catch most of the problematic issues that could occur, syntactically. In addition, when adding new features and/or updating existing code, please update/add unit tests accordingly.
+
+### Contributor API Docs
+
+[Contributor API Docs](docs/contributor)
