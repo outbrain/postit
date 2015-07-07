@@ -8,6 +8,8 @@ Factory Module.
 * [Factory](#Factory)
   * [.create(id)](#Factory.create) ⇒ <code>object</code>
   * [.destroy(id)](#Factory.destroy) ⇒ <code>void</code>
+  * [.get(id)](#Factory.get) ⇒ <code>object</code>
+  * [.getAll()](#Factory.getAll) ⇒ <code>object</code>
 
 <a name="Factory.create"></a>
 ### Factory.create(id) ⇒ <code>object</code>
@@ -31,3 +33,20 @@ Destroys an explicit `PostIt`, factory instance.
 | --- | --- |
 | id | <code>string</code> | 
 
+<a name="Factory.get"></a>
+### Factory.get(id) ⇒ <code>object</code>
+Gets an explicit `PostIt`, factory instance.
+
+**Kind**: static method of <code>[Factory](#Factory)</code>  
+**Access:** public  
+
+| Param | Type |
+| --- | --- |
+| id | <code>string</code> | 
+
+<a name="Factory.getAll"></a>
+### Factory.getAll() ⇒ <code>object</code>
+Gets all `PostIt`, factory instances.
+
+**Kind**: static method of <code>[Factory](#Factory)</code>  
+**Access:** public  
