@@ -2,7 +2,7 @@
 
 An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-[![Unit Test Coverage](http://img.shields.io/badge/coverage-98.51%-green.svg?style=flat)](#)
+[![Unit Test Coverage](http://img.shields.io/badge/coverage-98.67%-green.svg?style=flat)](#)
 
 ## Getting Started
 
@@ -52,7 +52,7 @@ $ npm run deploy
 
 ## API
 
-### .add(id) => `object`
+### .add(id) => `object` | `void`
 
 Creates and manages a new `PostIt` instance.
 
@@ -64,7 +64,7 @@ Creates and manages a new `PostIt` instance.
 PostIt.add('baz');
 ```
 
-### .remove(id) => `object`
+### .remove(id) => `object` | `void`
 
 Removes an explicit `PostIt` instance.
 
@@ -92,7 +92,7 @@ Returns the length of all `PostIt` instances.
 PostIt.size();
 ```
 
-### .on(id, event, listener) => `object`
+### .on(id, event, listener) => `object` | `void`
 
 Registers `.postMessage` event listeners.
 
@@ -103,14 +103,14 @@ Registers `.postMessage` event listeners.
 | listener | `function` |
 
 ```javascript
-PostIt.on('foo', 'foo.bar', function (event) {
-	if (event.origin !== 'http://www.foo.com') {
+PostIt.on('baz', 'baz.bar', function (event) {
+	if (event.origin !== 'http://www.baz.com') {
 		return;
 	}
 });
 ```
 
-### .off(id, event[, listener]) => `object`
+### .off(id, event[, listener]) => `object` | `void`
 
 Unregisters (all | explicit) `.postMessage` event listeners.
 
@@ -122,15 +122,15 @@ Unregisters (all | explicit) `.postMessage` event listeners.
 
 ```javascript
 // Unregister all listeners of a given `event`:
-PostIt.off('foo', 'foo.bar');
+PostIt.off('baz', 'baz.bar');
 
-function fooBar() {}
+function bazBar() {}
 
 // Unregister an explicit listener of a given `event`:
-PostIt.off('foo', 'foo.bar', fooBar)
+PostIt.off('baz', 'baz.bar', bazBar);
 ```
 
-### .emit(id, event, target, message, origin) => `object | void`
+### .emit(id, event, target, message, origin) => `object` | `void`
 
 Emits explicit `.postMessage` events.
 
@@ -143,7 +143,7 @@ Emits explicit `.postMessage` events.
 | origin  | `string` |
 
 ```javascript
-PostIt.emit('foo', 'foo.bar', event.source, { foo: 'bar' }, 'http://www.foo.com');
+PostIt.emit('baz', 'baz.bar', event.source, { baz: 'bar' }, 'http://www.baz.com');
 ```
 
 ### .openWindow(options) => `object`
@@ -163,8 +163,8 @@ See: [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)
 
 ```javascript
 PostIt.openWindow({
-	url: 'bar.html',
-	title: 'bar',
+	url: 'http://www.foo.com',
+	title: 'foo',
 	width: 700,
 	height: 500
 });
