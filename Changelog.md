@@ -6,7 +6,9 @@
 
 - Initial release.
 
-### July 6, 2015 - [Diff](https://github.com/outbrain/postit/compare/v0.1.0...v0.2.0) - [Docs](https://github.com/outbrain/postit/tree/v0.2.0/docs/contributor/api)
+## v0.2.0
+
+### July 7, 2015 - [Diff](https://github.com/outbrain/postit/compare/v0.1.0...v0.2.0) - [Docs](https://github.com/outbrain/postit/tree/v0.2.0/docs/contributor/api)
 
 - Minor documentation corrections.
 - Add `Changelog` and contributing documentation.
