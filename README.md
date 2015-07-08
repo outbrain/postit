@@ -2,7 +2,7 @@
 
 An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-[![Unit Test Coverage](http://img.shields.io/badge/coverage-98.71%-green.svg?style=flat)](#)
+[![Unit Test Coverage](http://img.shields.io/badge/coverage-98.06%-green.svg?style=flat)](#)
 
 ## Getting Started
 
@@ -52,7 +52,7 @@ $ npm run deploy
 
 ## API
 
-### .add(id) => `object` | `void`
+### .add(id) => `object`
 
 Creates and manages a new `PostIt` instance.
 
@@ -64,7 +64,7 @@ Creates and manages a new `PostIt` instance.
 PostIt.add('baz');
 ```
 
-### .remove(id) => `object` | `void`
+### .remove(id) => `object`
 
 Removes an explicit `PostIt` instance.
 
@@ -78,7 +78,7 @@ PostIt.remove('baz');
 
 ### .removeAll() => `object`
 
-Remove all `PostIt` instances.
+Removes all `PostIt` instances.
 
 ```javascript
 PostIt.removeAll();
@@ -92,7 +92,27 @@ Returns the length of all `PostIt` instances.
 PostIt.size();
 ```
 
-### .on(id, event, listener) => `object` | `void`
+### .get(id) => `object` | `void`
+
+Gets an explicit `PostIt` instance.
+
+| Param |   Type   |
+|:-----:|:--------:|
+| id    | `string` |
+
+```javascript
+PostIt.get('baz');
+```
+
+### .getAll() => `object`
+
+Gets all `PostIt` instances.
+
+```javascript
+PostIt.getAll();
+```
+
+### .on(id, event, listener) => `object`
 
 Registers `.postMessage` event listeners.
 
@@ -110,7 +130,7 @@ PostIt.on('baz', 'baz.bar', function (event) {
 });
 ```
 
-### .off(id, event[, listener]) => `object` | `void`
+### .off(id, event[, listener]) => `object`
 
 Unregisters (all | explicit) `.postMessage` event listeners.
 
@@ -130,17 +150,17 @@ function bazBar() {}
 PostIt.off('baz', 'baz.bar', bazBar);
 ```
 
-### .emit(id, event, target, message, origin) => `object` | `void`
+### .emit(id, event, target, message, origin) => `object`
 
-Emits explicit `.postMessage` events.
+Emits explicit `message` events, using the client's `.postMessage` emitter.
 
-|  Param  |   Type   |
-|:-------:|:--------:|
-| id      | `string` |
-| event   | `string` |
-| target  | `node`   |
-| message | `string` |
-| origin  | `string` |
+|  Param  |              Type             |
+|:-------:|:-----------------------------:|
+| id      | `string`                      |
+| event   | `string`                      |
+| target  | `node`                        |
+| message | `string` | `array` | `object` |
+| origin  | `string`                      |
 
 ```javascript
 PostIt.emit('baz', 'baz.bar', event.source, { baz: 'bar' }, 'http://www.baz.com');

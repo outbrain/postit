@@ -7,7 +7,7 @@
   * [new PostIt(id)](#new_PostIt_new)
   * [.on(event, listener)](#PostIt+on) ⇒ <code>object</code>
   * [.off(event, [listener])](#PostIt+off) ⇒ <code>object</code>
-  * [.emit(event, target, message, origin)](#PostIt+emit) ⇒ <code>object</code> &#124; <code>void</code>
+  * [.emit(event, target, message, origin)](#PostIt+emit) ⇒ <code>object</code>
 
 <a name="new_PostIt_new"></a>
 ### new PostIt(id)
@@ -43,8 +43,8 @@ Unregisters (all | explicit) `.postMessage` event listeners.
 | [listener] | <code>function</code> | 
 
 <a name="PostIt+emit"></a>
-### postIt.emit(event, target, message, origin) ⇒ <code>object</code> &#124; <code>void</code>
-Emits `message` events, using the client's `.postMessage` emitter.
+### postIt.emit(event, target, message, origin) ⇒ <code>object</code>
+Emits explicit `message` events, using the client's `.postMessage` emitter.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  
