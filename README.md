@@ -2,7 +2,7 @@
 
 An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-[![Unit Test Coverage](http://img.shields.io/badge/coverage-98.06%-green.svg?style=flat)](#)
+[![Unit Test Coverage](http://img.shields.io/badge/coverage-99.35%-green.svg?style=flat)](#)
 
 ## Getting Started
 
@@ -160,7 +160,7 @@ Emits explicit `message` events, using the client's `.postMessage` emitter.
 | event   | `string`                  |
 | target  | `node`                    |
 | message | `string` `array` `object` |
-| origin  |                           |
+| origin  | `string`                  |
 
 ```javascript
 PostIt.emit('baz', 'baz.bar', event.source, { baz: 'bar' }, 'http://www.baz.com');
