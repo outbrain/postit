@@ -154,13 +154,13 @@ PostIt.off('baz', 'baz.bar', bazBar);
 
 Emits explicit `message` events, using the client's `.postMessage` emitter.
 
-|  Param  |              Type             |
-|:-------:|:-----------------------------:|
-| id      | `string`                      |
-| event   | `string`                      |
-| target  | `node`                        |
-| message | `string` | `array` | `object` |
-| origin  | `string`                      |
+|  Param  |            Type           |
+|:-------:|:-------------------------:|
+| id      | `string`                  |
+| event   | `string`                  |
+| target  | `node`                    |
+| message | `string` `array` `object` |
+| origin  |                           |
 
 ```javascript
 PostIt.emit('baz', 'baz.bar', event.source, { baz: 'bar' }, 'http://www.baz.com');
