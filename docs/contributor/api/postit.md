@@ -52,7 +52,7 @@ Emits explicit `message` events, using the client's `.postMessage` emitter.
 | Param | Type |
 | --- | --- |
 | event | <code>string</code> | 
-| target | <code>node</code> | 
+| target | <code>object</code> | 
 | message | <code>string</code> &#124; <code>array</code> &#124; <code>object</code> | 
 | origin | <code>string</code> | 
 

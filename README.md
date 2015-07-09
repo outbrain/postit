@@ -158,7 +158,7 @@ Emits explicit `message` events, using the client's `.postMessage` emitter.
 |:-------:|:-------------------------:|
 | id      | `string`                  |
 | event   | `string`                  |
-| target  | `node`                    |
+| target  | `object`                  |
 | message | `string` `array` `object` |
 | origin  | `string`                  |
 
