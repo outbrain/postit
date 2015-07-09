@@ -56,11 +56,13 @@ $ npm run deploy
 ## Browser Support
 
 |      Browser      | Version |
-|:-----------------:|---------|
+|:-----------------:|:-------:|
 | Chrome            | Latest  |
 | Firefox           | Latest  |
 | Safari            | Latest  |
-| Internet Explorer | 9+      |
+| Internet Explorer | 9+ *    |
+
+* = `PostIt.window` does not work in IE, cross-domain, whilst using `.postMessage`; however, `iframe` support is available.
 
 ## Coding Guidelines
 
