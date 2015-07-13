@@ -5,8 +5,8 @@
 
 * [PostIt](#PostIt)
   * [new PostIt(id)](#new_PostIt_new)
-  * [.off](#PostIt+off) ⇒ <code>object</code>
   * [.on(event, listener)](#PostIt+on) ⇒ <code>object</code>
+  * [.off(event, [listener])](#PostIt+off) ⇒ <code>object</code>
   * [.emit(event, target, message, origin)](#PostIt+emit) ⇒ <code>object</code>
 
 <a name="new_PostIt_new"></a>
@@ -17,18 +17,6 @@ PostIt Module.
 | Param | Type |
 | --- | --- |
 | id | <code>string</code> | 
-
-<a name="PostIt+off"></a>
-### postIt.off ⇒ <code>object</code>
-Unregisters (all | explicit) `.postMessage` event listeners.
-
-**Kind**: instance property of <code>[PostIt](#PostIt)</code>  
-**Access:** public  
-
-| Param | Type |
-| --- | --- |
-| event | <code>string</code> | 
-| [listener] | <code>function</code> | 
 
 <a name="PostIt+on"></a>
 ### postIt.on(event, listener) ⇒ <code>object</code>
@@ -41,6 +29,18 @@ Registers `.postMessage` event listeners.
 | --- | --- |
 | event | <code>string</code> | 
 | listener | <code>function</code> | 
+
+<a name="PostIt+off"></a>
+### postIt.off(event, [listener]) ⇒ <code>object</code>
+Unregisters (all | explicit) `.postMessage` event listeners.
+
+**Kind**: instance method of <code>[PostIt](#PostIt)</code>  
+**Access:** public  
+
+| Param | Type |
+| --- | --- |
+| event | <code>string</code> | 
+| [listener] | <code>function</code> | 
 
 <a name="PostIt+emit"></a>
 ### postIt.emit(event, target, message, origin) ⇒ <code>object</code>
