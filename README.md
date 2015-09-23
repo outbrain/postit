@@ -8,48 +8,6 @@ An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/
 
 `PostIt` requires [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download), before proceeding.
 
-```bash
-# Clone the postit repo.
-$ git clone git@github.com:outbrain/postit.git
-
-# Navigate to the root /postit directory.
-$ cd postit
-
-# Install Dependencies
-$ npm install
-```
-
-## Testing
-
-Run Unit Tests/JSHint.
-
-```bash
-# Unit Tests
-$ npm run test:unit
-
-# JSHint
-$ npm run test:jshint
-
-# JSHint and Unit Tests
-$ npm test
-```
-
-## Contributor API Docs
-
-Create Contributor API Docs.
-
-```bash
-$ npm run docs
-```
-
-## Deploy
-
-Executes all necessary tasks for deploying code (`test`, `dist` and `docs`).
-
-```bash
-$ npm run deploy
-```
-
 ## API
 
 ### .add(id) => `object`

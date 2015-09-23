@@ -4,9 +4,10 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
 var header = require('gulp-header');
 var jshint = require('gulp-jshint');
-var karma = require('gulp-karma');
+var Server = require('karma').Server;
 var gulpJsdoc2md = require('gulp-jsdoc-to-markdown');
 var stylish = require('jshint-stylish');
 var del = require('del');
@@ -25,44 +26,37 @@ var glob = {
 var banner = ['/*',
 	' * PostIt v<%= version %>',
 	' * Copyright 2015 coopersemantics',
-	' * Available under MIT license <https://github.com/outbrain/postit/LICENSE>',
+	' * Available under MIT license <https://github.com/outbrain/postit/blob/master/LICENSE>',
 	' * @Date <%= date %>',
 	' */',
 	''].join('\n');
 
-// Tests (JSHint).
-gulp.task('test:jshint', function () {
+// Linting.
+gulp.task('lint', function () {
 	gulp.src(glob.all)
 		.pipe(jshint(JSHINTRC))
 		.pipe(jshint.reporter(stylish));
 });
 
-// Tests (Unit).
-gulp.task('test:unit', function (cb) {
-	// Delete the current `coverage` files.
+// Functional Tests (Unit).
+gulp.task('unit', function (done) {
 	del.sync('coverage/**');
 
-	gulp.src(glob.lib)
-		.pipe(karma({
-      configFile: 'karma.conf.js',
-      action: 'run'
-    }))
-    .on('error', function (err) {
-      throw new Error(err);
-    });
+	new Server({
+		configFile: __dirname + '/karma.conf.js',
+		singleRun: true
+	}, done).start();
 });
-
-// Tests (JSHint/Unit).
-gulp.task('test', ['test:jshint', 'test:unit']);
 
 // Build `dist` dir/files.
 gulp.task('dist', function () {
-	// Delete the current `dist` files.
 	del.sync('dist/**');
 
 	gulp.src(glob.app)
 		.pipe(browserify())
+		.pipe(sourcemaps.init())
 		.pipe(uglify())
+		.pipe(sourcemaps.write())
 		.pipe(rename('postit.js'))
 		.pipe(header(banner, {
 			version: version,
@@ -73,7 +67,7 @@ gulp.task('dist', function () {
 		.on('finish', console.log.bind(console, '`dist` task complete'));
 });
 
-// Create contributor `docs`.
+// Documentation Creation.
 gulp.task('docs', function () {
 	// Delete the current `docs/contributor/api` files.
 	del.sync('docs/contributor/api/**');
@@ -89,11 +83,7 @@ gulp.task('docs', function () {
 		.pipe(gulp.dest('docs/contributor/api'));
 });
 
-// Build.
-gulp.task('build', ['test:jshint', 'dist']);
 
-// Deploy.
+gulp.task('test', ['lint', 'unit']);
 gulp.task('deploy', ['test', 'dist', 'docs']);
-
-// Default.
-gulp.task('default', ['build']);
+gulp.task('default', ['deploy']);

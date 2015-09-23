@@ -4,12 +4,6 @@
 
 Create a fork of the `PostIt` repo., on github at: `https://github.com/outbrain/postit`
 
-Change the directory to your web root directory, whatever that might be:
-
-```bash
-$ cd /path/to/your/www/root/
-```
-
 Clone your `PostIt` fork, to work locally:
 
 ```bash
@@ -34,22 +28,36 @@ Get in the habit of pulling in the `upstream master`, to stay up to date, as `Po
 $ git pull upstream master
 ```
 
-Run the necessary `Gulp` tasks:
+## Gulp Tasks
+
+### Testing/Linting
+
+Run unit tests and/or linting.
 
 ```bash
 # Unit Tests
-$ npm run test:unit
+$ npm run unit
 
-# JSHint
-$ npm run test:jshint
+# Lint
+$ npm run lint
 
-# JSHint and Unit Tests
+# Lint and Unit Tests
 $ npm test
+```
 
-# Contributor API Docs
+### Contributor API Docs
+
+Create  ContributorAPI Docs.
+
+```bash
 $ npm run docs
+```
 
-# Unit Tests/JSHint/Contributor API Docs
+### Deploy
+
+Executes all necessary tasks for deploying code (`lint`, `unit`, `dist` and `docs`).
+
+```bash
 $ npm run deploy
 ```
 
@@ -66,7 +74,7 @@ $ npm run deploy
 
 ## Coding Guidelines
 
-Please adhere to the current style conventions. JSHint will catch most of the problematic issues that could occur, syntactically. In addition, when adding new features and/or updating existing code, please update/add unit tests accordingly.
+Please adhere to the current style conventions. `JSHint` will catch most of the problematic issues that could occur, syntactically. In addition, when adding new features and/or updating existing code, please update/add unit tests accordingly.
 
 ### Contributor API Docs
 

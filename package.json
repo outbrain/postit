@@ -1,14 +1,15 @@
 {
+  "private": true,
   "name": "postit",
   "title": "PostIt",
   "description": "An elegant wrapper for postMessage.",
   "version": "0.3.0",
-  "main": "lib/bootstrap.js",
-  "homepage": "https://github.com/outbrain/postit",
   "author": "coopersemantics",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/outbrain/postit.git"
+  "license": "MIT",
+  "repository": "outbrain/postit",
+  "homepage": "https://github.com/outbrain/postit",
+  "bugs": {
+    "url": "https://github.com/outbrain/postit/issues"
   },
   "keywords": [
     "postit",
@@ -17,10 +18,14 @@
     "browser",
     "library"
   ],
-  "bugs": {
-    "url": "https://github.com/outbrain/postit/issues"
+  "main": "lib/bootstrap.js",
+  "scripts": {
+    "lint": "gulp lint",
+    "unit": "gulp unit",
+    "test": "gulp test",
+    "docs": "gulp docs",
+    "deploy": "gulp deploy"
   },
-  "license": "MIT",
   "devDependencies": {
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
@@ -30,11 +35,11 @@
     "gulp-header": "^1.2.2",
     "gulp-jsdoc-to-markdown": "^1.1.1",
     "gulp-jshint": "^1.11.0",
-    "gulp-karma": "0.0.4",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
     "jshint-stylish": "^2.0.0",
-    "karma": "^0.12.36",
+    "karma": "^0.13.9",
     "karma-browserify": "^4.2.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.12",
@@ -48,13 +53,5 @@
     "mocha": "^2.2.5",
     "phantomjs": "^1.9.17",
     "sinon": "^1.15.3"
-  },
-  "scripts": {
-    "build": "gulp build",
-    "deploy": "gulp deploy",
-    "test:jshint": "gulp test:jshint",
-    "test:unit": "gulp test:unit",
-    "test": "gulp test",
-    "docs": "gulp docs"
   }
 }
