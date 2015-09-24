@@ -10,7 +10,7 @@ An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/
 
 ```bash
 # Install postit
-$ npm install git+ssh://git@github.com/outbrain/postit.git
+$ npm install --save git+ssh://git@github.com/outbrain/postit.git
 ```
 
 ## Run PostIt in a Browser
