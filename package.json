@@ -3,7 +3,7 @@
   "name": "postit",
   "title": "PostIt",
   "description": "An elegant wrapper for postMessage.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "coopersemantics",
   "license": "MIT",
   "repository": "outbrain/postit",
@@ -26,6 +26,7 @@
     "docs": "gulp docs",
     "deploy": "gulp deploy"
   },
+  "pre-commit": ["test"],
   "devDependencies": {
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
@@ -52,6 +53,7 @@
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
     "phantomjs": "^1.9.17",
+    "pre-commit": "^1.1.1",
     "sinon": "^1.15.3"
   }
 }

@@ -33,3 +33,12 @@
 - Modify incoming `event` filtering and add a format fix for `contributor` doc.
 - Modify `.off`'s functionality.
 - Additional tweaks to `.off`'s functionality.
+
+## v0.3.1
+
+### September 24, 2015 - [Diff](https://github.com/outbrain/postit/compare/v0.3.0...v0.3.1) - [Docs](https://github.com/outbrain/postit/tree/v0.3.1/docs/contributor/api)
+
+- Update `README`/`contributor' documentation, add source maps, and rename `gulp` tasks.
+- Add `CommonJS` browser shimming support.
+- Update `README` documentation.
+- Add a pre-commit hook, for `Git`.
