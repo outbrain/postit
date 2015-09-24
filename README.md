@@ -8,7 +8,28 @@ An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/
 
 `PostIt` requires [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download), before proceeding.
 
-## API
+```bash
+# Install postit
+$ npm install git+ssh://git@github.com/outbrain/postit.git
+```
+
+## Run PostIt in a Browser
+
+### HTML Script Element
+
+[`path/to/postit.js`](dist/postit.js)
+
+```html
+<script src="path/to/postit.js"></script>
+```
+
+### CommonJS Browser Shimming (Browserify and Other Flavors)
+
+```js
+var PostIt = require('postit');
+```
+
+## API Documentation
 
 ### .add(id) => `object`
 
@@ -151,15 +172,6 @@ PostIt.openWindow({
 ## Contributing to PostIt
 
 [Contributor Docs](docs/contributor/index.md)
-
-## Run PostIt in a Browser
-
-Use [`dist/postit.js`](dist/postit.js).
-
-```html
-<script src="path/to/postit.js"></script>
-<!-- `PostIt` is now in the global context. -->
-```
 
 ## Changelog
 

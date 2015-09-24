@@ -53,7 +53,10 @@ gulp.task('dist', function () {
 	del.sync('dist/**');
 
 	gulp.src(glob.app)
-		.pipe(browserify())
+		.pipe(browserify({
+			standalone: 'PostIt',
+			debug: true
+		}))
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(sourcemaps.write())

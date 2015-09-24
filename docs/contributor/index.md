@@ -47,7 +47,7 @@ $ npm test
 
 ### Contributor API Docs
 
-Create  ContributorAPI Docs.
+Create Contributor API Docs.
 
 ```bash
 $ npm run docs
