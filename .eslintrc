@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jasmine": true
+  },
+  "globals": {
+    "sinon": true
+  },
+  "rules": {
+    "curly": 2,
+    "complexity": [2, 15],
+    "no-unused-vars": 1,
+    "no-empty": 1,
+    "strict": [2, "global"],
+    "no-undef": 2,
+    "quotes": [2, "single", "avoid-escape"],
+    "no-loop-func": 1
+  }
+}

@@ -6,14 +6,12 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var header = require('gulp-header');
-var jshint = require('gulp-jshint');
+var eslint = require('gulp-eslint');
 var gulpJsdoc2md = require('gulp-jsdoc-to-markdown');
 var Server = require('karma').Server;
-var stylish = require('jshint-stylish');
 var del = require('del');
 var version = require('./package').version;
 
-var JSHINTRC = '.jshintrc';
 var DIRECTORY = 'lib';
 
 var glob = {
@@ -34,8 +32,8 @@ var banner = ['/*',
 // Linting.
 gulp.task('lint', function () {
 	gulp.src(glob.all)
-		.pipe(jshint(JSHINTRC))
-		.pipe(jshint.reporter(stylish));
+		.pipe(eslint())
+		.pipe(eslint.format());
 });
 
 // Functional Tests (Unit).
