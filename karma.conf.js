@@ -11,7 +11,7 @@ module.exports = function (config) {
     basePath: '',
 
     // Frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai', 'sinon', 'commonjs'],
+    frameworks: ['mocha', 'chai', 'sinon', 'browserify'],
 
     // Patterns to load in the browser.
     files: [
@@ -27,8 +27,8 @@ module.exports = function (config) {
     // Preprocess matching files before serving them to the browser.
     // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'lib/**/!(*.unit).js': ['commonjs', 'coverage'],
-      'lib/**/*.unit.js': ['commonjs']
+      'lib/**/!(*.unit).js': ['browserify', 'coverage'],
+      'lib/**/*.unit.js': ['browserify']
     },
 
     // Available reporters: https://npmjs.org/browse/keyword/karma-reporter

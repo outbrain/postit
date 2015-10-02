@@ -195,4 +195,4 @@ For more information on SemVer, please visit <http://semver.org/>.
 
 ## License
 
-[MIT License](LICENSE).
+[MIT License](LICENSE)

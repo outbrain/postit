@@ -31,7 +31,9 @@
     "docs": "gulp docs",
     "deploy": "gulp deploy"
   },
-  "pre-commit": ["test"],
+  "pre-commit": [
+    "test"
+  ],
   "devDependencies": {
     "browserify": "^10.2.4",
     "chai": "^3.0.0",
@@ -45,10 +47,9 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
     "karma": "^0.13.9",
-    "karma-browserify": "^4.2.1",
+    "karma-browserify": "^4.4.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.12",
-    "karma-commonjs": "0.0.13",
     "karma-coverage": "^0.4.2",
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.2.0",
