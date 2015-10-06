@@ -17,8 +17,8 @@ var DIRECTORY = 'lib';
 var glob = {
 	all: ['*.js', DIRECTORY + '/**/*.js'],
 	lib: [DIRECTORY + '/**/*.js'],
-	docs: [DIRECTORY + '/**/!(*.unit|bootstrap).js'],
-	app: ['lib/bootstrap.js']
+	docs: [DIRECTORY + '/**/!(*.unit).js'],
+	app: ['lib/manager.js']
 };
 
 var banner = ['/*',

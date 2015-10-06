@@ -16,6 +16,9 @@
     "strict": [2, "global"],
     "no-undef": 2,
     "quotes": [2, "single", "avoid-escape"],
-    "no-loop-func": 1
+    "no-loop-func": 1,
+    "comma-dangle": [2, "never"],
+    "semi": [2, "always"],
+    "space-after-keywords": 1
   }
 }
