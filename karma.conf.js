@@ -36,7 +36,8 @@ module.exports = function (config) {
 
     coverageReporter: {
       type: 'html',
-      dir: 'coverage/'
+      dir: 'coverage/',
+      sourceStore: require('istanbul').Store.create('fslookup')
     },
 
     // Web server port.
