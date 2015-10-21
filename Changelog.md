@@ -42,3 +42,14 @@
 - Add `CommonJS` browser shimming support.
 - Update `README` documentation.
 - Add a pre-commit hook, for `Git`.
+
+## v0.3.2
+
+### October 21, 2015 - [Diff](https://github.com/outbrain/postit/compare/v0.3.1...v0.3.2) - [Docs](https://github.com/outbrain/postit/tree/v0.3.2/docs/contributor/api)
+
+- Add `files` property in `package.json` for `npm` installs.
+- Add `ESLint` in replacement of `JSHint`.
+- Add `karma-browserify` in replacement of `karma-commonjs`.
+- Remove `bootstrap.js` and add new `ESLint` rules.
+- Add `sourceStore` fix for `karma-coverage`.
+- Add `browserify-istanbul` in replacement of `sourceStore`.
