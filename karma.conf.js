@@ -1,5 +1,7 @@
 'use strict';
 
+var istanbul = require('browserify-istanbul');
+
 /*
 * Karam Config.
 * @see https://github.com/karma-runner/karma/blob/master/docs/config/01-configuration-file.md
@@ -8,10 +10,18 @@
 module.exports = function (config) {
   config.set({
     // Base path that will be used to resolve all patterns.
-    basePath: '',
+    basePath: './',
 
     // Frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'chai', 'sinon', 'browserify'],
+
+    // Browserify config.
+    browserify: {
+      debug: true,
+      transform: [istanbul({
+        ignore: ['**/*unit.js']
+      })]
+    },
 
     // Patterns to load in the browser.
     files: [
@@ -27,8 +37,7 @@ module.exports = function (config) {
     // Preprocess matching files before serving them to the browser.
     // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'lib/**/!(*.unit).js': ['browserify', 'coverage'],
-      'lib/**/*.unit.js': ['browserify']
+      'lib/**/*.js': ['browserify']
     },
 
     // Available reporters: https://npmjs.org/browse/keyword/karma-reporter
@@ -36,8 +45,7 @@ module.exports = function (config) {
 
     coverageReporter: {
       type: 'html',
-      dir: 'coverage/',
-      sourceStore: require('istanbul').Store.create('fslookup')
+      dir: 'coverage/'
     },
 
     // Web server port.
