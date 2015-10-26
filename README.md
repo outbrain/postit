@@ -158,7 +158,7 @@ Loads a resource into a new browsing context (`window`).
 | options.top    | `number` |
 | options.left   | `number` |
 
-See: [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) for additional paramters that can be utilized as parameters of `options`.
+See: [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) for more options.
 
 ```javascript
 PostIt.openWindow({
