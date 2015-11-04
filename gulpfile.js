@@ -57,12 +57,12 @@ gulp.task('dist', function () {
 		}))
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
-		.pipe(sourcemaps.write())
-		.pipe(rename('postit.js'))
 		.pipe(header(banner, {
 			version: version,
 			date: new Date()
 		}))
+		.pipe(rename('postit.js'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./dist'))
 		.on('error', console.error.bind(console))
 		.on('finish', console.log.bind(console, '`dist` task complete'));
