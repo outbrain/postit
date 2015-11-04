@@ -103,9 +103,7 @@ Registers `.postMessage` event listeners.
 
 ```javascript
 PostIt.on('baz', 'baz.bar', function (event) {
-	if (event.origin !== 'http://www.baz.com') {
-		return;
-	}
+	//
 });
 ```
 
@@ -142,7 +140,7 @@ Emits explicit `message` events, using the client's `.postMessage` emitter.
 | origin  | `string`                  |
 
 ```javascript
-PostIt.emit('baz', 'baz.bar', event.source, { baz: 'bar' }, 'http://www.baz.com');
+PostIt.emit('baz', 'baz.bar', window.parent.opener, { baz: 'bar' }, 'http://www.baz.com');
 ```
 
 ### .openWindow(options) => `object`

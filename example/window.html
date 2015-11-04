@@ -15,8 +15,7 @@
 				'use strict';
 
 				/**
-				 * @note Always specify an exact target `origin`, not `*`, when you use `.postMessage` to send data to other windows.
-				 * Also, an `event.origin` check is always a secure choice.
+				 * @note Always specify a more explicit target `origin`, not `*`, when utilizing `.postMessage`, to send data.
 				 */
 
 				({
@@ -62,16 +61,6 @@
 					},
 
 					updateButton: function (event) {
-						/**
-						 * Do we trust the sender of this message?
-						 * Ensure to add the `event.origin` URL check
-						 * for security. For more information, see:
-						 * https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
-						 * if (event.origin !== 'http://foo.com') {
-						 *   return
-						 * }
-						 */
-
 						this.elems.postIt.style.background = event.dataParsed.color;
 					}
 				}).init();
