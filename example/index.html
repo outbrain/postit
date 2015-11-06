@@ -14,82 +14,28 @@
 			(function() {
 				'use strict';
 
+				var postItElem = document.getElementById('postIt');
+
 				/**
 				 * @note Always specify a more explicit target `origin`, not `*`, when utilizing `.postMessage`, to send data.
 				 */
 
-				({
-					init: function () {
-						var that = this;
+				PostIt
+					.add('foo')
+					.on('foo', 'foo.bar', function (event) {
+						postItElem.innerHTML = event.dataParsed.message;
 
-						that.elems = {
-							postIt: document.getElementById('postIt')
-						};
+						PostIt.emit('foo', 'foo.baz', event.source, { message: 'Message from `index.html`' }, '*');
+					});
 
-						that.buttonProperties = {
-							colors: ['red', 'blue', 'green']
-						};
-
-						PostIt.add('foo');
-						that.listeners();
-					},
-
-					listeners: function () {
-						var that = this;
-
-						PostIt
-							.on('foo', 'foo.bar', that.updateFooBar.bind(that))
-							.on('foo', 'foo.baz', that.updateFooBaz.bind(that));
-
-							that.elems.postIt.addEventListener('click', that.openWindow, false);
-					},
-
-					emitEvent: function (options) {
-						PostIt.emit(options.id, options.event, options.target, options.message, options.origin);
-					},
-
-					logEvent: function () {
-						console.log.apply(console, arguments);
-					},
-
-					updateFooBar: function (event) {
-						var that = this;
-
-						that.updateButton();
-						that.logEvent('[foo.bar]', event.dataParsed);
-					},
-
-					updateFooBaz: function (event) {
-						var that = this;
-
-						that.logEvent('[foo.baz]', event.dataParsed);
-						that.emitEvent({
-							id: 'foo',
-							event: 'foo.baz',
-							target: event.source,
-							message: { color: that.buttonProperties.colors[0] },
-							origin: '*'
-						});
-					},
-
-					updateButton: function () {
-						var that = this;
-						var color = that.buttonProperties.colors.pop();
-
-						that.buttonProperties.colors.unshift(color);
-
-						that.elems.postIt.style.background = color;
-					},
-
-					openWindow: function (options) {
-						PostIt.openWindow({
-							url: 'window.html',
-							title: 'foo',
-							width: 700,
-							height: 500
-						});
-					}
-				}).init();
+				postItElem.addEventListener('click', function () {
+					PostIt.openWindow({
+						url: 'window.html',
+						title: 'foo',
+						width: 700,
+						height: 500
+					});
+				}, false);
 			})();
 		</script>
 	</body>

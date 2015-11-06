@@ -14,56 +14,21 @@
 			(function() {
 				'use strict';
 
+				var postItElem = document.getElementById('postIt');
+
+				PostIt
+					.add('foo')
+					.on('foo', 'foo.baz', function (event) {
+						postItElem.innerHTML = event.dataParsed.message;
+					});
+
 				/**
 				 * @note Always specify a more explicit target `origin`, not `*`, when utilizing `.postMessage`, to send data.
 				 */
 
-				({
-					init: function () {
-						var that = this;
-
-						that.elems = {
-							postIt: document.getElementById('postIt')
-						};
-
-						PostIt.add('foo');
-						that.listeners();
-					},
-
-					listeners: function () {
-						var that = this;
-
-						that.elems.postIt.addEventListener('click', function () {
-							that.emitEvent({
-								id: 'foo',
-								event: 'foo.bar',
-								target: window.parent.opener,
-								message: { foo: 'bar' },
-								origin: '*'
-							});
-
-							window.close();
-						}, false);
-
-						PostIt.on('foo', 'foo.baz', that.updateButton.bind(that));
-
-						window.addEventListener('load', that.emitEvent.bind(that, {
-							id: 'foo',
-							event: 'foo.baz',
-							target: window.parent.opener,
-							message: 'hi',
-							origin: '*'
-						}), false);
-					},
-
-					emitEvent: function (options) {
-						PostIt.emit(options.id, options.event, options.target, options.message, options.origin);
-					},
-
-					updateButton: function (event) {
-						this.elems.postIt.style.background = event.dataParsed.color;
-					}
-				}).init();
+				postItElem.addEventListener('click', function () {
+					PostIt.emit('foo', 'foo.bar', window.parent.opener, { message: 'Message from `window.html`' }, '*');
+				}, false);
 			})();
 		</script>
 	</body>
