@@ -53,3 +53,13 @@
 - Remove `bootstrap.js` and add new `ESLint` rules.
 - Add `sourceStore` fix for `karma-coverage`.
 - Add `browserify-istanbul` in replacement of `sourceStore`.
+
+## v0.4.0
+
+### November 6, 2015 - [Diff](https://github.com/outbrain/postit/compare/v0.3.2...v0.4.0) - [Docs](https://github.com/outbrain/postit/tree/v0.4.0/docs/contributor/api)
+
+- Update `README`/`contributor` documentation.
+- Add `origin` checking in `.on`, to avoid manual checking.
+- Refactor `.on` to leverage parsed data, and additionally, fix event origin.
+- Add external source map.
+- Update `/example/*.html` to be more succinct, and additionally, ensure that `.on` fails gracefully, for a thrown `syntaxError` exception.

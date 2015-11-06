@@ -70,7 +70,6 @@ gulp.task('dist', function () {
 
 // Documentation Creation.
 gulp.task('docs', function () {
-	// Delete the current `docs/contributor/api` files.
 	del.sync('docs/contributor/api/**');
 
 	gulp.src(glob.docs)
