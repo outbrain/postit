@@ -102,7 +102,7 @@ Registers `.postMessage` event listeners.
 | listener | `function` |
 
 ```javascript
-PostIt.on('baz', 'baz.bar', function (event) {
+PostIt.on('baz', 'bar', function (event) {
 	//
 });
 ```
@@ -119,12 +119,12 @@ Unregisters (all | explicit) `.postMessage` event listeners.
 
 ```javascript
 // Unregister all listeners of a given `event`:
-PostIt.off('baz', 'baz.bar');
+PostIt.off('baz', 'bar');
 
 function bazBar() {}
 
 // Unregister an explicit listener of a given `event`:
-PostIt.off('baz', 'baz.bar', bazBar);
+PostIt.off('baz', 'bar', bazBar);
 ```
 
 ### .emit(id, event, target, message, origin) => `object`
@@ -140,7 +140,7 @@ Emits explicit `message` events, using the client's `.postMessage` emitter.
 | origin  | `string`                  |
 
 ```javascript
-PostIt.emit('baz', 'baz.bar', window.parent.opener, { baz: 'bar' }, 'http://www.baz.com');
+PostIt.emit('baz', 'bar', window.parent.opener, { baz: 'bar' }, 'http://www.baz.com');
 ```
 
 ### .openWindow(options) => `object`
@@ -166,6 +166,10 @@ PostIt.openWindow({
 	height: 500
 });
 ```
+
+## Example
+
+[Example](example)
 
 ## Contributing to PostIt
 

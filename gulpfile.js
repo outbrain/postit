@@ -83,7 +83,6 @@ gulp.task('docs', function () {
 		.pipe(gulp.dest('docs/contributor/api'));
 });
 
-
 gulp.task('test', ['lint', 'unit']);
 gulp.task('deploy', ['test', 'dist', 'docs']);
 gulp.task('default', ['deploy']);

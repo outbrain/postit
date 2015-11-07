@@ -8,30 +8,43 @@
 	<body>
 		<button id="postIt">PostIt</button>
 
+		<iframe id="frame" src="iframe.html" width="300" height="300"></iframe>
+
 		<!-- Scripts -->
 		<script src="../dist/postit.js"></script>
 		<script>
 			(function() {
 				'use strict';
 
-				var postItElem = document.getElementById('postIt');
-
 				/**
 				 * @note Always specify a more explicit target `origin`, not `*`, when utilizing `.postMessage`, to send data.
 				 */
 
+				var postItElem = document.getElementById('postIt');
+				var frameElem = document.getElementById('frame');
+
 				PostIt
+					// Create a new `PostIt` instance, in `Factory`.
 					.add('foo')
-					.on('foo', 'foo.bar', function (event) {
+
+					// Subscribe to `foo`'s `bar` event.
+					.on('foo', 'bar', function (event) {
 						postItElem.innerHTML = event.dataParsed.message;
 
-						PostIt.emit('foo', 'foo.baz', event.source, { message: 'Message from `index.html`' }, '*');
+						// Emit `foo`'s `baz` event.
+						PostIt.emit('foo', 'baz', event.source, { message: 'Message from `index.html`' }, '*');
+					})
+
+					// Subscribe to all `.postMessage` events.
+					// Useful for unwrapped, `.postMessage` events.
+					.on('foo', '*', function (event) {
+						console.log('All `.postMessage` events');
 					});
 
 				postItElem.addEventListener('click', function () {
 					PostIt.openWindow({
 						url: 'window.html',
-						title: 'foo',
+						title: 'PostIt',
 						width: 700,
 						height: 500
 					});
