@@ -7,7 +7,7 @@ Create a fork of the `PostIt` repo., on github at: `https://github.com/outbrain/
 Clone your `PostIt` fork, to work locally:
 
 ```bash
-$ git clone git@github.com:outbrain/postit.git
+$ git clone git@github.com:USERNAME/postit.git
 ```
 
 Change the directory to the newly created dir. `postit/`, and install dependencies.

@@ -1,6 +1,6 @@
 # PostIt
 
-An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
+An elegant wrapper for [`.postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
 ![Unit Test Coverage](http://img.shields.io/badge/coverage-99.31%-green.svg?style=flat)
 
