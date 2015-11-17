@@ -1,7 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
-var browserify = require('gulp-browserify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
@@ -12,13 +14,13 @@ var Server = require('karma').Server;
 var del = require('del');
 var version = require('./package').version;
 
-var DIRECTORY = 'lib';
+var DIRECTORY = './lib';
 
 var glob = {
 	all: ['*.js', DIRECTORY + '/**/*.js'],
 	lib: [DIRECTORY + '/**/*.js'],
 	docs: [DIRECTORY + '/**/!(*.unit).js'],
-	app: ['lib/manager.js']
+	app: [DIRECTORY + '/manager.js']
 };
 
 var banner = ['/*',
@@ -38,7 +40,7 @@ gulp.task('lint', function () {
 
 // Functional Tests (Unit).
 gulp.task('unit', function (done) {
-	del.sync('coverage/**');
+	del.sync('./coverage/**');
 
 	new Server({
 		configFile: __dirname + '/karma.conf.js',
@@ -48,14 +50,16 @@ gulp.task('unit', function (done) {
 
 // Build `dist` dir/files.
 gulp.task('dist', function () {
-	del.sync('dist/**');
+	del.sync('./dist/**');
 
-	gulp.src(glob.app)
-		.pipe(browserify({
-			standalone: 'PostIt',
-			debug: true
-		}))
-		.pipe(sourcemaps.init())
+	browserify(glob.app, {
+		standalone: 'PostIt',
+		debug: true
+	})
+		.bundle()
+		.pipe(source('postit.js'))
+		.pipe(buffer())
+		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(uglify())
 		.pipe(header(banner, {
 			version: version,
@@ -70,7 +74,7 @@ gulp.task('dist', function () {
 
 // Documentation Creation.
 gulp.task('docs', function () {
-	del.sync('docs/contributor/api/**');
+	del.sync('./docs/**');
 
 	gulp.src(glob.docs)
 		.pipe(gulpJsdoc2md())
@@ -80,7 +84,7 @@ gulp.task('docs', function () {
 		.pipe(rename(function (path) {
 			path.extname = '.md';
 		}))
-		.pipe(gulp.dest('docs/contributor/api'));
+		.pipe(gulp.dest('./docs'));
 });
 
 gulp.task('test', ['lint', 'unit']);

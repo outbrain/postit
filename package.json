@@ -21,8 +21,7 @@
   "main": "dist/postit.js",
   "files": [
     "lib/",
-    "dist/",
-    "docs/"
+    "dist/"
   ],
   "scripts": {
     "lint": "gulp lint",
@@ -40,7 +39,6 @@
     "chai": "^3.0.0",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
-    "gulp-browserify": "^0.5.1",
     "gulp-eslint": "^1.0.0",
     "gulp-header": "^1.2.2",
     "gulp-jsdoc-to-markdown": "^1.1.1",
@@ -60,6 +58,8 @@
     "mocha": "^2.2.5",
     "phantomjs": "^1.9.17",
     "pre-commit": "^1.1.1",
-    "sinon": "^1.15.3"
+    "sinon": "^1.15.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

@@ -171,9 +171,9 @@ PostIt.openWindow({
 
 [Example](example)
 
-## Contributing to PostIt
+## Contributing
 
-[Contributor Docs](docs/contributor/index.md)
+[Contributing](CONTRIBUTING.md)
 
 ## Changelog
 

@@ -74,8 +74,8 @@ $ npm run deploy
 
 ## Coding Guidelines
 
-Please adhere to the current style conventions. `ESLint` will catch most of the problematic issues that could occur, syntactically. In addition, when adding new features and/or updating existing code, please update/add unit tests accordingly.
+Please adhere to the current style conventions. `ESLint` will catch most of the problematic issues that could occur, syntactically. In addition, when adding new features and/or updating existing code, please update/add unit tests, accordingly.
 
 ### Contributor API Docs
 
-[Contributor API Docs](api)
+[Contributor API Docs](docs)
