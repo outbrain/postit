@@ -63,3 +63,12 @@
 - Refactor `.on` to leverage parsed data, and additionally, fix event origin.
 - Add external source map.
 - Update `/example/*.html` to be more succinct, and additionally, ensure that `.on` fails gracefully, for a thrown `syntaxError` exception.
+
+## v0.4.1
+
+### November 17, 2015 - [Diff](https://github.com/outbrain/postit/compare/v0.4.0...v0.4.1) - [Docs](https://github.com/outbrain/postit/tree/v0.4.1/docs)
+
+- Update `/example/*.html` and `README` documentation.
+- Update `README`/`contributor` documentation.
+- Update `devDependencies` and remove unused, example code.
+- Remove `gulp-browserify`, given that it is no longer maintained, and replace with a recommended recipe. In addition, restructure `/docs`.
