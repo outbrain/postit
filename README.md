@@ -177,7 +177,7 @@ PostIt.openWindow({
 
 ## Changelog
 
-[Changelog](Changelog.md)
+[Changelog](CHANGELOG.md)
 
 ## Versioning
 
