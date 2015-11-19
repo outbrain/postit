@@ -19,6 +19,7 @@
     "no-loop-func": 1,
     "comma-dangle": [2, "never"],
     "semi": [2, "always"],
+    "no-extra-semi": 1,
     "space-after-keywords": 1,
     "valid-typeof": 2,
     "max-nested-callbacks": [1, 3]
