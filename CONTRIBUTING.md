@@ -53,14 +53,6 @@ Create Contributor API Docs.
 $ npm run docs
 ```
 
-### Deploy
-
-Executes all necessary tasks for deploying code (`lint`, `unit`, `dist` and `docs`).
-
-```bash
-$ npm run deploy
-```
-
 ## Browser Support
 
 |      Browser      | Version |

@@ -49,14 +49,16 @@ gulp.task('unit', function (done) {
 });
 
 // Build `dist` dir/files.
-gulp.task('dist', function () {
+gulp.task('build', function () {
 	del.sync('./dist/**');
 
-	browserify(glob.app, {
+	browserify({
+		entries: glob.app,
 		standalone: 'PostIt',
 		debug: true
 	})
 		.bundle()
+		.on('error', console.error.bind(console))
 		.pipe(source('postit.js'))
 		.pipe(buffer())
 		.pipe(sourcemaps.init({ loadMaps: true }))
@@ -68,7 +70,6 @@ gulp.task('dist', function () {
 		.pipe(rename('postit.js'))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./dist'))
-		.on('error', console.error.bind(console))
 		.on('finish', console.log.bind(console, '`dist` task complete'));
 });
 
@@ -88,5 +89,5 @@ gulp.task('docs', function () {
 });
 
 gulp.task('test', ['lint', 'unit']);
-gulp.task('deploy', ['test', 'dist', 'docs']);
-gulp.task('default', ['deploy']);
+gulp.task('release', ['build', 'docs']);
+gulp.task('default', ['test', 'docs']);
