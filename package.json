@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "preversion": "gulp test",
-    "version": "gulp release && git add -A dist",
+    "version": "gulp release && git add -A",
     "postversion": "git push && git push --tags",
     "test": "gulp test",
     "lint": "gulp lint",
@@ -38,6 +38,7 @@
     "chai": "^3.0.0",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
+    "gulp-conventional-changelog": "^0.7.0",
     "gulp-eslint": "^1.0.0",
     "gulp-header": "^1.2.2",
     "gulp-jsdoc-to-markdown": "^1.1.1",

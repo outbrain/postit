@@ -1,15 +1,16 @@
 'use strict';
 
 var gulp = require('gulp');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var header = require('gulp-header');
 var eslint = require('gulp-eslint');
 var gulpJsdoc2md = require('gulp-jsdoc-to-markdown');
+var conventionalChangelog = require('gulp-conventional-changelog');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var Server = require('karma').Server;
 var del = require('del');
 var version = require('./package').version;
@@ -33,12 +34,12 @@ var banner = ['/*',
 
 // Linting.
 gulp.task('lint', function () {
-	gulp.src(glob.all)
+	return gulp.src(glob.all)
 		.pipe(eslint())
 		.pipe(eslint.format());
 });
 
-// Functional Tests (Unit).
+// Functional tests (unit).
 gulp.task('unit', function (done) {
 	del.sync('./coverage/**');
 
@@ -52,7 +53,7 @@ gulp.task('unit', function (done) {
 gulp.task('build', function () {
 	del.sync('./dist/**');
 
-	browserify({
+	return browserify({
 		entries: glob.app,
 		standalone: 'PostIt',
 		debug: true
@@ -70,14 +71,25 @@ gulp.task('build', function () {
 		.pipe(rename('postit.js'))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./dist'))
-		.on('finish', console.log.bind(console, '`dist` task complete'));
+		.on('finish', console.log.bind(console, '`build` task complete'));
 });
 
-// Documentation Creation.
+// `CHANGELOG` creation.
+gulp.task('changelog', function () {
+	return gulp.src('CHANGELOG.md', {
+		buffer: false
+	})
+		.pipe(conventionalChangelog({
+			preset: 'eslint'
+		}))
+		.pipe(gulp.dest('./'));
+});
+
+// Documentation creation.
 gulp.task('docs', function () {
 	del.sync('./docs/**');
 
-	gulp.src(glob.docs)
+	return gulp.src(glob.docs)
 		.pipe(gulpJsdoc2md())
 		.on('error', function (err) {
 			throw new Error(err);
@@ -89,5 +101,5 @@ gulp.task('docs', function () {
 });
 
 gulp.task('test', ['lint', 'unit']);
-gulp.task('release', ['build', 'docs']);
+gulp.task('release', ['build', 'changelog', 'docs']);
 gulp.task('default', ['test', 'docs']);
