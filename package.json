@@ -3,7 +3,7 @@
   "name": "postit",
   "title": "PostIt",
   "description": "An elegant wrapper for postMessage.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "author": "coopersemantics",
   "license": "MIT",
   "repository": "outbrain/postit",
