@@ -53,6 +53,37 @@ Create Contributor API Docs.
 $ npm run docs
 ```
 
+### Commit Message Guidelines
+
+Commit messages are written in a simple format, which clearly describes the purpose of a change.
+
+Commit message summaries, must follow the following format:
+
+```
+Type: message (fixes|refs #number)
+```
+
+`Type` is one of the following:
+
+* `Fix` - Bug fix.
+* `Update` - Backward-compatible enhancement.
+* `Breaking` - Backward-incompatible enhancement.
+* `Docs` - Documentation change.
+* `Build` - Build process change.
+* `New` - New feature.
+* `Upgrade` - Dependency upgrade.
+
+The message should succinctly summarize, the change. In addition, an issue number, must be added, at the end, e.g.,
+
+```
+Build: Allow revert commits in commit messages. (refs #734)
+Fix: Properly parse and add response Headers to Response. (fixes #840)
+```
+
+It is important to note, that if a commit does not completely fix a given issue, then, use `(refs #1234)` instead of `(fixes #1234)`.
+
+The commit message format, is important, given that the `CHANGELOG` is generated based on said conventions.
+
 ## Browser Support
 
 |      Browser      | Version |
