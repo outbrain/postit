@@ -1,57 +1,12 @@
 # Contributing to PostIt
 
-## Build a Local Copy of PostIt
+## Working with a Fork
 
-Create a fork of the `PostIt` repo., on github at: `https://github.com/outbrain/postit`
+The first step to contributing fixes and improvements to `postit`, is [forking the repository](https://help.github.com/articles/fork-a-repo) into your own `GitHub` account. Make sure to [follow the instructions](https://help.github.com/articles/fork-a-repo) on how to 'Configure Remotes' and 'Pull in upstream changes' -- you will need to keep your fork in sync with changes that happen in the official repository.
 
-Clone your `PostIt` fork, to work locally:
+## Never Commit on Master
 
-```bash
-$ git clone git@github.com:USERNAME/postit.git
-```
-
-Change the directory to the newly created dir. `postit/`, and install dependencies.
-
-```bash
-$ cd postit && npm install
-```
-
-Add the `PostIt` master as a remote, e.g.: `upstream`:
-
-```bash
-$ git remote add upstream git://github.com/outbrain/postit.git
-```
-
-Get in the habit of pulling in the `upstream master`, to stay up to date, as `PostIt` receives new commits.
-
-```bash
-$ git pull upstream master
-```
-
-## Gulp Tasks
-
-### Testing/Linting
-
-Run unit tests and/or linting.
-
-```bash
-# Unit Tests
-$ npm run unit
-
-# Lint
-$ npm run lint
-
-# Lint and Unit Tests
-$ npm test
-```
-
-### Contributor API Docs
-
-Create Contributor API Docs.
-
-```bash
-$ npm run docs
-```
+When working on a fork, always think of your master branch as a 'landing place' for upstream changes. Only make commits to topic branches. Only `postit` maintainers, have the authority to merge in upstream commits.
 
 ## Commit Message Guidelines
 
@@ -83,6 +38,38 @@ Fix: Properly parse and add response Headers to Response. (fixes #840)
 It is important to note, that if a commit does not completely fix a given issue, then, use `(refs #1234)` instead of `(fixes #1234)`.
 
 The commit message format, is important, given that the `CHANGELOG` is generated based on said conventions.
+
+## Submit a Pull Request
+
+When a commit is ready to be reviewed by a `postit` maintainer, submit a [pull request](https://help.github.com/articles/creating-a-pull-request).
+Push the topic branch to your fork and then use one of the several options in `GitHub`'s interface to iniatiate the request.
+
+Unless a rather minor change, has been made, it is generally a good practice, to file an issue, explaining your idea, before writing code or submitting a pull request -- especially when introducing new features.
+
+## Gulp Tasks
+
+### Testing/Linting
+
+Run unit tests and/or linting.
+
+```bash
+# Unit Tests
+$ npm run unit
+
+# Lint
+$ npm run lint
+
+# Lint and Unit Tests
+$ npm test
+```
+
+### Contributor API Docs
+
+Create Contributor API Docs.
+
+```bash
+$ npm run docs
+```
 
 ## Versioning
 
