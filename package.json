@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "preversion": "gulp test",
-    "version": "gulp release && git add -A",
+    "version": "gulp release && git add CHANGELOG.md -A dist",
     "postversion": "git push && git push --tags",
     "test": "gulp test",
     "lint": "gulp lint",
