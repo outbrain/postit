@@ -102,4 +102,4 @@ gulp.task('docs', function () {
 
 gulp.task('test', ['lint', 'unit']);
 gulp.task('release', ['build', 'changelog', 'docs']);
-gulp.task('default', ['test', 'docs']);
+gulp.task('default', ['test']);

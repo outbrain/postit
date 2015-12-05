@@ -42,7 +42,7 @@ The commit message format, is important, given that the `CHANGELOG` is generated
 ## Submit a Pull Request
 
 When a commit is ready to be reviewed by a `postit` maintainer, submit a [pull request](https://help.github.com/articles/creating-a-pull-request).
-Push the topic branch to your fork and then use one of the several options in `GitHub`'s interface to iniatiate the request.
+Push the topic branch to your fork and then use one of the several options in `GitHub`'s interface to initiate the request. Please do not commit `docs` and/or `dist` files; `postit` maintainers will address such, when cutting a new release.
 
 Unless a rather minor change, has been made, it is generally a good practice, to file an issue, explaining your idea, before writing code or submitting a pull request -- especially when introducing new features.
 
@@ -61,14 +61,6 @@ $ npm run lint
 
 # Lint and Unit Tests
 $ npm test
-```
-
-### Contributor API Docs
-
-Create Contributor API Docs.
-
-```bash
-$ npm run docs
 ```
 
 ## Versioning
