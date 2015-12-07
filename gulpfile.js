@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
@@ -15,13 +16,14 @@ var Server = require('karma').Server;
 var del = require('del');
 var version = require('./package').version;
 
-var DIRECTORY = './lib';
+var basePath = path.resolve(__dirname, '.');
+var libPath = path.join(basePath, 'lib');
 
 var glob = {
-	all: ['*.js', DIRECTORY + '/**/*.js'],
-	lib: [DIRECTORY + '/**/*.js'],
-	docs: [DIRECTORY + '/**/!(*.unit).js'],
-	app: [DIRECTORY + '/manager.js']
+	all: ['*.js', path.join(libPath, '**', '*.js')],
+	lib: [path.join(libPath, '**', '*.js')],
+	docs: [path.join(libPath, '**', '!(*.unit).js')],
+	app: [path.join(libPath, 'manager.js')]
 };
 
 var banner = ['/*',
@@ -44,7 +46,7 @@ gulp.task('unit', function (done) {
 	del.sync('./coverage/**');
 
 	new Server({
-		configFile: __dirname + '/karma.conf.js',
+		configFile: path.join(basePath, 'karma.conf.js'),
 		singleRun: true
 	}, done).start();
 });
@@ -74,7 +76,7 @@ gulp.task('build', function () {
 		.on('finish', console.log.bind(console, '`build` task complete'));
 });
 
-// `CHANGELOG` creation.
+// `CHANGELOG.md` creation.
 gulp.task('changelog', function () {
 	return gulp.src('CHANGELOG.md', {
 		buffer: false
@@ -100,6 +102,11 @@ gulp.task('docs', function () {
 		.pipe(gulp.dest('./docs'));
 });
 
+// Run the `test` task, when a file changes.
+gulp.task('watch', function() {
+	return gulp.watch(glob.lib, ['test']);
+});
+
 gulp.task('test', ['lint', 'unit']);
 gulp.task('release', ['build', 'changelog', 'docs']);
-gulp.task('default', ['test']);
+gulp.task('default', ['watch']);

@@ -7,10 +7,10 @@
 * Add `CHANGELOG` to the `release` task. ([e5a7a91325f938f5e1116f99cc3bbb5155030d9f](https://github.com/outbrain/postit/commit/e5a7a91325f938f5e1116f99cc3bbb5155030d9f))
 
 ---
-* Add `npm-version` for releases. ([2ee08240743274c3abe858f20dd18988166e0e27](https://github.com/outbrain/postit/commit/2ee08240743274c3abe858f20dd18988166e0e27))
-* Remove extra semicolon, and add a `ESLint` rule, to check for such. ([02ca59f9efcb79f19d3440b0ec4d55700e6afef3](https://github.com/outbrain/postit/commit/02ca59f9efcb79f19d3440b0ec4d55700e6afef3))
-* Add additional `ESLint` rules, replace `console.error` with `console.warn`, where appropriate, and refactor `.on`. ([e9a5ab5e8ded4bff8a839f7ec9e6de00656118c7](https://github.com/outbrain/postit/commit/e9a5ab5e8ded4bff8a839f7ec9e6de00656118c7))
-* Update filename case for `CHANGELOG`. ([ccaf4524e45766ccd299c87c23d23db2eb1516e3](https://github.com/outbrain/postit/commit/ccaf4524e45766ccd299c87c23d23db2eb1516e3))
+* Add `npm-version` for releases.
+* Remove extra semicolon, and add a `ESLint` rule, to check for such.
+* Add additional `ESLint` rules, replace `console.error` with `console.warn`, where appropriate, and refactor `.on`.
+* Update filename case for `CHANGELOG`.
 
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/outbrain/postit/compare/v0.4.0...v0.4.1) (2015-11-17)

@@ -63,6 +63,15 @@ $ npm run lint
 $ npm test
 ```
 
+### Watch
+
+Run unit tests/linting when a file changes.
+
+```bash
+# Lint and Unit Tests
+$ npm run watch
+```
+
 ## Versioning
 
 Releases will be numbered using the following format:
