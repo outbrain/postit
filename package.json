@@ -3,7 +3,7 @@
   "name": "postit",
   "title": "PostIt",
   "description": "An elegant wrapper for postMessage.",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "author": "coopersemantics",
   "license": "MIT",
   "repository": "outbrain/postit",
@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "preversion": "gulp test",
-    "version": "gulp release && git add CHANGELOG.md -A dist",
+    "version": "gulp release && git add CHANGELOG.md -A dist docs",
     "test": "gulp test",
     "lint": "gulp lint",
     "unit": "gulp unit",

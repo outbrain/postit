@@ -12,7 +12,7 @@ Helpers Module.
 
 <a name="helpers.serialize"></a>
 ### helpers.serialize(params) ⇒ <code>string</code>
-Serialize an object into a formatted string.
+Serializes an object into a formatted string.
 
 **Kind**: static method of <code>[helpers](#helpers)</code>  
 **Access:** public  

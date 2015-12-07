@@ -1,3 +1,21 @@
+<a name="0.4.3"></a>
+## [0.4.3](https://github.com/outbrain/postit/compare/v0.4.2...v0.4.3) (2015-12-07)
+
+
+### Build
+
+* Add `watch` task, which will run the `test` task, upon file change, and additionally, minor, `gulpfile.js` cleanup. ([72607e88f837e0f791180d5a9313cb7a6190ef81](https://github.com/outbrain/postit/commit/72607e88f837e0f791180d5a9313cb7a6190ef81))
+* Remove `postversion` command in `package.json`. ([de99dda9e732df6fc2558603dd1fe30759b3b25c](https://github.com/outbrain/postit/commit/de99dda9e732df6fc2558603dd1fe30759b3b25c))
+* Update `version` command in `package.json`. ([97c34dd666f662049060ea7500f668f4e21baaef](https://github.com/outbrain/postit/commit/97c34dd666f662049060ea7500f668f4e21baaef))
+
+### Docs
+
+* Add 'commit message guidelines' and fix spacing. ([f189b1dd5e1c2ff1d79201c73131db07fd67b99c](https://github.com/outbrain/postit/commit/f189b1dd5e1c2ff1d79201c73131db07fd67b99c))
+* Add 'Versioning' to `README` and minor document updates. ([fe214b4f5aaaf86d7142ccacc37c9fb224a61855](https://github.com/outbrain/postit/commit/fe214b4f5aaaf86d7142ccacc37c9fb224a61855))
+* Update `CONTRIBUTOR` documentation. ([60404f492d5cd41cce4e7ee1660fbecc8548c512](https://github.com/outbrain/postit/commit/60404f492d5cd41cce4e7ee1660fbecc8548c512))
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/outbrain/postit/compare/v0.4.1...v0.4.2) (2015-11-24)
 
