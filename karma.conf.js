@@ -58,7 +58,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     // Enable/disable watching files.
-    autoWatch: false,
+    autoWatch: true,
 
     // Available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['PhantomJS', 'Chrome'],
