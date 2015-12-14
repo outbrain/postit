@@ -45,7 +45,7 @@ gulp.task('lint', function () {
 gulp.task('unit', function (done) {
 	del.sync('./coverage/**');
 
-	new Server({
+	return new Server({
 		configFile: path.join(basePath, 'karma.conf.js'),
 		singleRun: true
 	}, done).start();
