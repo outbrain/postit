@@ -53,12 +53,6 @@ Unless a rather minor change, has been made, it is generally a good practice, to
 Run unit tests and/or linting.
 
 ```bash
-# Unit Tests
-$ npm run unit
-
-# Lint
-$ npm run lint
-
 # Lint and Unit Tests
 $ npm test
 ```

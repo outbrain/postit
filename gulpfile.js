@@ -28,7 +28,7 @@ var glob = {
 
 var banner = ['/*',
 	' * PostIt v<%= version %>',
-	' * Copyright 2015 coopersemantics',
+	' * Copyright 2016 coopersemantics',
 	' * Available under MIT license <https://github.com/outbrain/postit/blob/master/LICENSE>',
 	' * @Date <%= date %>',
 	' */',
