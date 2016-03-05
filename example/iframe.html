@@ -25,11 +25,11 @@
 					.add('foo')
 
 					// Subscribe to `foo`'s `baz` event.
-					.on('foo', 'baz', function (event) {
+					.on('foo', 'baz', function(event) {
 						postItElem.innerHTML = event.dataParsed.message;
 					});
 
-				postItElem.addEventListener('click', function () {
+				postItElem.addEventListener('click', function() {
 					// Emit `foo`'s `bar` event.
 					PostIt.emit('foo', 'bar', window.parent, { message: 'Message from `iframe.html`' }, '*');
 				}, false);

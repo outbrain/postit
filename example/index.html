@@ -27,7 +27,7 @@
 					.add('foo')
 
 					// Subscribe to `foo`'s `bar` event.
-					.on('foo', 'bar', function (event) {
+					.on('foo', 'bar', function(event) {
 						postItElem.innerHTML = event.dataParsed.message;
 
 						// Emit `foo`'s `baz` event.
@@ -36,14 +36,12 @@
 
 					// Subscribe to all `.postMessage` events.
 					// Useful for unwrapped, `.postMessage` events.
-					.on('foo', '*', function (event) {
+					.on('foo', '*', function(event) {
 						console.log('All `.postMessage` events');
 					});
 
-				postItElem.addEventListener('click', function () {
-					PostIt.openWindow({
-						url: 'window.html',
-						title: 'PostIt',
+				postItElem.addEventListener('click', function() {
+					PostIt.openWindow('window.html', 'PostIt', {
 						width: 700,
 						height: 500
 					});
