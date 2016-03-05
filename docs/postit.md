@@ -4,10 +4,10 @@
 **Access:** public  
 
 * [PostIt](#PostIt)
-  * [new PostIt(id)](#new_PostIt_new)
-  * [.on(event, listener)](#PostIt+on) ⇒ <code>object</code>
-  * [.off(event, [listener])](#PostIt+off) ⇒ <code>object</code>
-  * [.emit(event, target, message, origin)](#PostIt+emit) ⇒ <code>object</code>
+    * [new PostIt(id)](#new_PostIt_new)
+    * [.on(event, listener)](#PostIt+on) ⇒ <code>object</code>
+    * [.off(event, [listener])](#PostIt+off) ⇒ <code>object</code>
+    * [.emit(event, target, message, origin)](#PostIt+emit) ⇒ <code>object</code>
 
 <a name="new_PostIt_new"></a>
 ### new PostIt(id)

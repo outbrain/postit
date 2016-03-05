@@ -6,16 +6,16 @@ Manager Module.
 **Access:** public  
 
 * [Manager](#Manager)
-  * [.add(id)](#Manager.add) ⇒ <code>object</code>
-  * [.remove(id)](#Manager.remove) ⇒ <code>object</code>
-  * [.removeAll()](#Manager.removeAll) ⇒ <code>object</code>
-  * [.size()](#Manager.size) ⇒ <code>number</code>
-  * [.get(id)](#Manager.get) ⇒ <code>object</code> &#124; <code>void</code>
-  * [.getAll()](#Manager.getAll) ⇒ <code>object</code>
-  * [.on(id)](#Manager.on) ⇒ <code>object</code>
-  * [.off(id)](#Manager.off) ⇒ <code>object</code>
-  * [.emit(id)](#Manager.emit) ⇒ <code>object</code>
-  * [.openWindow()](#Manager.openWindow)
+    * [.add(id)](#Manager.add) ⇒ <code>object</code>
+    * [.remove(id)](#Manager.remove) ⇒ <code>object</code>
+    * [.removeAll()](#Manager.removeAll) ⇒ <code>object</code>
+    * [.size()](#Manager.size) ⇒ <code>number</code>
+    * [.get(id)](#Manager.get) ⇒ <code>object</code> &#124; <code>void</code>
+    * [.getAll()](#Manager.getAll) ⇒ <code>object</code>
+    * [.on(id)](#Manager.on) ⇒ <code>object</code>
+    * [.off(id)](#Manager.off) ⇒ <code>object</code>
+    * [.emit(id)](#Manager.emit) ⇒ <code>object</code>
+    * [.openWindow()](#Manager.openWindow)
 
 <a name="Manager.add"></a>
 ### Manager.add(id) ⇒ <code>object</code>

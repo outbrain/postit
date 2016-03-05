@@ -1,3 +1,23 @@
+<a name="1.0.0-rc.1"></a>
+# [1.0.0-rc.1](https://github.com/outbrain/postit/compare/v0.4.3...v1.0.0-rc.1) (2016-03-05)
+
+
+### Breaking
+
+* `.openWindow` signature has changed, to read: `.openWindow(url, name, options)`. ([23ad25ab8c9c028de5bd7f6a5fd6c0b3a028ee76](https://github.com/outbrain/postit/commit/23ad25ab8c9c028de5bd7f6a5fd6c0b3a028ee76))
+
+### Build
+
+* Enable watching files, in `Karma`. ([7d9a6114f6e8018190a68e634be043f0d4aefc46](https://github.com/outbrain/postit/commit/7d9a6114f6e8018190a68e634be043f0d4aefc46))
+* Remove unused packages; namely, `mkdir` and `mkdirp`. ([fe3840bd2ff306e819fe0a1b87ea825c4d4dca94](https://github.com/outbrain/postit/commit/fe3840bd2ff306e819fe0a1b87ea825c4d4dca94))
+
+### Upgrade
+
+* Update `package` dependencies, add ESLint rules and modify the 'Copyright' date. ([ea9d8349be729fa0352417120531e995eb4c2bf9](https://github.com/outbrain/postit/commit/ea9d8349be729fa0352417120531e995eb4c2bf9))
+* Update `package` dependencies. ([82bef9b1ca992eea216d0f01113f2afbba0c2c02](https://github.com/outbrain/postit/commit/82bef9b1ca992eea216d0f01113f2afbba0c2c02))
+
+
+
 <a name="0.4.3"></a>
 ## [0.4.3](https://github.com/outbrain/postit/compare/v0.4.2...v0.4.3) (2015-12-07)
 

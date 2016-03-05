@@ -143,25 +143,21 @@ Emits explicit `message` events, using the client's `.postMessage` emitter.
 PostIt.emit('baz', 'bar', window.parent.opener, { baz: 'bar' }, 'http://www.baz.com');
 ```
 
-### .openWindow(options) => `object`
+### .openWindow(url, name, options) => `object`
 
 Loads a resource into a new browsing context (`window`).
 
 |      Param     |   Type   |
 |:--------------:|:--------:|
-| options.url    | `string` |
-| options.title  | `string` |
+| url            | `string` |
+| name           | `string` |
 | options.width  | `number` |
 | options.height | `number` |
-| options.top    | `number` |
-| options.left   | `number` |
 
 See: [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) for more options.
 
 ```javascript
-PostIt.openWindow({
-	url: 'http://www.foo.com',
-	title: 'foo',
+PostIt.openWindow('http://www.foo.com', 'foo', {
 	width: 700,
 	height: 500
 });

@@ -6,9 +6,9 @@ Helpers Module.
 **Access:** public  
 
 * [helpers](#helpers)
-  * [.serialize(params)](#helpers.serialize) ⇒ <code>string</code>
-  * [.shallowMerge(destination, source)](#helpers.shallowMerge) ⇒ <code>object</code>
-  * [.openWindow(options)](#helpers.openWindow) ⇒ <code>object</code>
+    * [.serialize(params)](#helpers.serialize) ⇒ <code>string</code>
+    * [.shallowMerge(destination, source)](#helpers.shallowMerge) ⇒ <code>object</code>
+    * [.openWindow(url, name, options)](#helpers.openWindow) ⇒ <code>object</code>
 
 <a name="helpers.serialize"></a>
 ### helpers.serialize(params) ⇒ <code>string</code>
@@ -34,7 +34,7 @@ Merges a shallow `source` object into the `destination` object.
 | source | <code>object</code> | 
 
 <a name="helpers.openWindow"></a>
-### helpers.openWindow(options) ⇒ <code>object</code>
+### helpers.openWindow(url, name, options) ⇒ <code>object</code>
 Loads a resource into a new browsing context (`window`).
 
 **Kind**: static method of <code>[helpers](#helpers)</code>  
@@ -43,9 +43,9 @@ Loads a resource into a new browsing context (`window`).
 
 | Param | Type |
 | --- | --- |
+| url | <code>string</code> | 
+| name | <code>string</code> | 
 | options | <code>object</code> | 
-| options.url | <code>string</code> | 
-| options.title | <code>string</code> | 
 | options.width | <code>number</code> | 
 | options.height | <code>number</code> | 
 

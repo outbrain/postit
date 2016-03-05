@@ -6,13 +6,13 @@ Factory Module.
 **Access:** public  
 
 * [Factory](#Factory)
-  * [.create(id)](#Factory.create) ⇒ <code>object</code>
-  * [.destroy(id)](#Factory.destroy) ⇒ <code>void</code>
-  * [.get(id)](#Factory.get) ⇒ <code>object</code>
-  * [.getAll()](#Factory.getAll) ⇒ <code>object</code>
+    * [.add(id)](#Factory.add) ⇒ <code>object</code>
+    * [.remove(id)](#Factory.remove) ⇒ <code>void</code>
+    * [.get(id)](#Factory.get) ⇒ <code>object</code>
+    * [.getAll()](#Factory.getAll) ⇒ <code>object</code>
 
-<a name="Factory.create"></a>
-### Factory.create(id) ⇒ <code>object</code>
+<a name="Factory.add"></a>
+### Factory.add(id) ⇒ <code>object</code>
 Creates a `PostIt` factory (Singleton).
 
 **Kind**: static method of <code>[Factory](#Factory)</code>  
@@ -22,9 +22,9 @@ Creates a `PostIt` factory (Singleton).
 | --- | --- |
 | id | <code>string</code> | 
 
-<a name="Factory.destroy"></a>
-### Factory.destroy(id) ⇒ <code>void</code>
-Destroys an explicit `PostIt`, factory instance.
+<a name="Factory.remove"></a>
+### Factory.remove(id) ⇒ <code>void</code>
+Removes an explicit `PostIt`, factory instance.
 
 **Kind**: static method of <code>[Factory](#Factory)</code>  
 **Access:** public  
