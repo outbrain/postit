@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "postit",
+  "name": "postit-js",
   "title": "PostIt",
   "description": "An elegant wrapper for postMessage.",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "author": "coopersemantics",
   "license": "MIT",
   "repository": "outbrain/postit",
@@ -13,6 +13,7 @@
   },
   "keywords": [
     "postit",
+    "postit-js",
     "postMessage",
     "cross-window",
     "browser",

@@ -9,8 +9,7 @@ An elegant wrapper for [`.postMessage`](https://developer.mozilla.org/en-US/docs
 `PostIt` requires [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download), before proceeding.
 
 ```bash
-# Install postit
-$ npm install --save git+ssh://git@github.com/outbrain/postit.git
+$ npm install --save postit-js
 ```
 
 ## Run PostIt in a Browser
@@ -151,6 +150,7 @@ Loads a resource into a new browsing context (`window`).
 |:--------------:|:--------:|
 | url            | `string` |
 | name           | `string` |
+| options        | `object` |
 | options.width  | `number` |
 | options.height | `number` |
 

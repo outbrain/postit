@@ -1,3 +1,9 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/outbrain/postit/compare/v1.0.0-rc.1...v1.0.0) (2016-03-15)
+
+
+
+
 <a name="1.0.0-rc.1"></a>
 # [1.0.0-rc.1](https://github.com/outbrain/postit/compare/v0.4.3...v1.0.0-rc.1) (2016-03-05)
 
