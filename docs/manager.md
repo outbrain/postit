@@ -12,10 +12,10 @@ Manager Module.
     * [.size()](#Manager.size) ⇒ <code>number</code>
     * [.get(id)](#Manager.get) ⇒ <code>object</code> &#124; <code>void</code>
     * [.getAll()](#Manager.getAll) ⇒ <code>object</code>
-    * [.on(id)](#Manager.on) ⇒ <code>object</code>
-    * [.off(id)](#Manager.off) ⇒ <code>object</code>
-    * [.emit(id)](#Manager.emit) ⇒ <code>object</code>
-    * [.openWindow()](#Manager.openWindow)
+    * [.on(id, event, listener)](#Manager.on) ⇒ <code>object</code>
+    * [.off(id, event, [listener])](#Manager.off) ⇒ <code>object</code>
+    * [.emit(id, event, target, message, origin)](#Manager.emit) ⇒ <code>object</code>
+    * [.openWindow(url, name, options)](#Manager.openWindow)
 
 <a name="Manager.add"></a>
 ### Manager.add(id) ⇒ <code>object</code>
@@ -67,37 +67,54 @@ Gets all `PostIt` instances.
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 <a name="Manager.on"></a>
-### Manager.on(id) ⇒ <code>object</code>
+### Manager.on(id, event, listener) ⇒ <code>object</code>
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
-**See**: [postit.md#PostIt+on](postit.md#PostIt+on) for further information (signature, etc.).  
+**See**: [postit.md#PostIt+on](postit.md#PostIt+on) for further information.  
 
 | Param | Type |
 | --- | --- |
 | id | <code>string</code> | 
+| event | <code>string</code> | 
+| listener | <code>function</code> | 
 
 <a name="Manager.off"></a>
-### Manager.off(id) ⇒ <code>object</code>
+### Manager.off(id, event, [listener]) ⇒ <code>object</code>
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
-**See**: [postit.md#PostIt+off](postit.md#PostIt+off) for further information (signature, etc.).  
+**See**: [postit.md#PostIt+off](postit.md#PostIt+off) for further information.  
 
 | Param | Type |
 | --- | --- |
 | id | <code>string</code> | 
+| event | <code>string</code> | 
+| [listener] | <code>function</code> | 
 
 <a name="Manager.emit"></a>
-### Manager.emit(id) ⇒ <code>object</code>
+### Manager.emit(id, event, target, message, origin) ⇒ <code>object</code>
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
-**See**: [postit.md#PostIt+emit](postit.md#PostIt+emit) for further information (signature, etc.).  
+**See**: [postit.md#PostIt+emit](postit.md#PostIt+emit) for further information.  
 
 | Param | Type |
 | --- | --- |
 | id | <code>string</code> | 
+| event | <code>string</code> | 
+| target | <code>object</code> | 
+| message | <code>string</code> &#124; <code>array</code> &#124; <code>object</code> | 
+| origin | <code>string</code> | 
 
 <a name="Manager.openWindow"></a>
-### Manager.openWindow()
+### Manager.openWindow(url, name, options)
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
-**See**: [helpers.md#helpers.openWindow](helpers.md#helpers.openWindow) for further information (signature, etc.).  
+**See**: [helpers.md#helpers.openWindow](helpers.md#helpers.openWindow) for further information.  
+
+| Param | Type |
+| --- | --- |
+| url | <code>string</code> | 
+| name | <code>string</code> | 
+| options | <code>object</code> | 
+| options.width | <code>number</code> | 
+| options.height | <code>number</code> | 
+

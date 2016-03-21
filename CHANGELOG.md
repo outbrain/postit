@@ -1,3 +1,17 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/outbrain/postit/compare/v1.0.0...v1.0.1) (2016-03-21)
+
+
+### Build
+
+* Add `prepublish` task. ([3a9f02d25a42228845dcb0b7aa0494e10f52a3f4](https://github.com/outbrain/postit/commit/3a9f02d25a42228845dcb0b7aa0494e10f52a3f4))
+
+### Docs
+
+* Update `manager`, `postit` and `README` documentation. ([41bf6fe26e920ab21834dc5765021640b7375116](https://github.com/outbrain/postit/commit/41bf6fe26e920ab21834dc5765021640b7375116))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/outbrain/postit/compare/v1.0.0-rc.1...v1.0.0) (2016-03-15)
 
