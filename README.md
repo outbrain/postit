@@ -2,11 +2,11 @@
 
 An elegant wrapper for [`.postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-![Unit Test Coverage](http://img.shields.io/badge/coverage-99.31%-green.svg?style=flat)
+![Unit Test Coverage](http://img.shields.io/badge/coverage-99.32%-green.svg?style=flat)
 
-## Getting Started
+## Installation
 
-`PostIt` requires [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download), before proceeding.
+Install `postit-js` as a dependency.
 
 ```bash
 $ npm install --save postit-js
@@ -92,7 +92,7 @@ PostIt.getAll();
 
 ### .on(id, event, listener) => `object`
 
-Registers `.postMessage` event listeners.
+Registers an explicit event listener.
 
 |   Param  |    Type    |
 |:--------:|:----------:|
@@ -101,28 +101,28 @@ Registers `.postMessage` event listeners.
 | listener | `function` |
 
 ```javascript
-PostIt.on('baz', 'bar', function (event) {
+PostIt.on('baz', 'bar', function(event) {
 	//
 });
 ```
 
 ### .off(id, event[, listener]) => `object`
 
-Unregisters (all | explicit) `.postMessage` event listeners.
+Unregisters (all | explicit) event listeners.
 
-|   Param  |    Type    |
-|:--------:|:----------:|
-| id       | `string`   |
-| event    | `string`   |
-| listener | `function` |
+|   Param    |    Type    |
+|:----------:|:----------:|
+| id         | `string`   |
+| event      | `string`   |
+| [listener] | `function` |
 
 ```javascript
-// Unregister all listeners of a given `event`:
+// Unregister all `bar` listeners.
 PostIt.off('baz', 'bar');
 
 function bazBar() {}
 
-// Unregister an explicit listener of a given `event`:
+// Unregister an explicit `bar` listener.
 PostIt.off('baz', 'bar', bazBar);
 ```
 
