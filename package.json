@@ -27,6 +27,7 @@
   "scripts": {
     "preversion": "gulp test",
     "version": "gulp release && git add CHANGELOG.md -A dist docs",
+    "prepublish": "gulp test",
     "test": "gulp test",
     "watch": "gulp"
   },
