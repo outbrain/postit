@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/outbrain/postit/compare/v1.1.0...v1.1.1) (2016-03-26)
+
+
+### Docs
+
+* Update `postit`, `/example/*.html` and `README` documentation. ([88f580adaefe920dc3cbbcd696297c3a20ce72de](https://github.com/outbrain/postit/commit/88f580adaefe920dc3cbbcd696297c3a20ce72de))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/outbrain/postit/compare/v1.0.1...v1.1.0) (2016-03-26)
 

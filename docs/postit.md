@@ -20,7 +20,7 @@ PostIt Module.
 
 <a name="PostIt+on"></a>
 ### postIt.on(event, listener) ⇒ <code>object</code>
-Registers an event `listener` for an `event`, to a `PostIt` instance.
+Registers a `listener` to a `PostIt` instance (`id`), for a given `event`.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  
@@ -32,8 +32,8 @@ Registers an event `listener` for an `event`, to a `PostIt` instance.
 
 <a name="PostIt+off"></a>
 ### postIt.off(event, [listener]) ⇒ <code>object</code>
-- If a `listener` is not provided, then unregister all event listeners for an `event`, from a `PostIt` instance.
-- If a `listener` is provided, then unregister an event `listener` for an `event`, from a `PostIt` instance.
+- If a `listener` is not provided, then unregister all listeners from a `PostIt` instance (`id`), for a given `event`.
+- If a `listener` is provided, then unregister a `listener` from a `PostIt` instance (`id`), for a given `event`.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  
@@ -45,7 +45,8 @@ Registers an event `listener` for an `event`, to a `PostIt` instance.
 
 <a name="PostIt+emit"></a>
 ### postIt.emit(event, target, message, origin) ⇒ <code>object</code>
-Emits an `event` to registered event listeners for an `event`, to a `PostIt` instance.
+- If `event` is an asterisk (\*), then emit an `event` to all listeners registered to a `PostIt` instance (`id`), for all given `event`s.
+- If `event` is not an asterisk (\*), then emit an `event` to all listeners registered to a `PostIt` instance (`id`), for a given `event`.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  
