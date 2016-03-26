@@ -32,7 +32,7 @@ var PostIt = require('postit');
 
 ### .add(id) => `object`
 
-Creates and manages a new `PostIt` instance.
+Creates and manages a `PostIt` instance (`id`).
 
 | Param |   Type   |
 |:-----:|:--------:|
@@ -44,7 +44,7 @@ PostIt.add('baz');
 
 ### .remove(id) => `object`
 
-Removes an explicit `PostIt` instance.
+Removes a `PostIt` instance (`id`).
 
 | Param |   Type   |
 |:-----:|:--------:|
@@ -72,7 +72,7 @@ PostIt.size();
 
 ### .get(id) => `object` | `void`
 
-Gets an explicit `PostIt` instance.
+Gets a `PostIt` instance (`id`).
 
 | Param |   Type   |
 |:-----:|:--------:|
@@ -92,7 +92,7 @@ PostIt.getAll();
 
 ### .on(id, event, listener) => `object`
 
-Registers an explicit event listener.
+Registers an event `listener` for an `event`, to a `PostIt` instance (`id`).
 
 |   Param  |    Type    |
 |:--------:|:----------:|
@@ -108,7 +108,8 @@ PostIt.on('baz', 'bar', function(event) {
 
 ### .off(id, event[, listener]) => `object`
 
-Unregisters (all | explicit) event listeners.
+- If a `listener` is not provided, then unregister all event listeners for an `event`, from a `PostIt` instance (`id`).
+- If a `listener` is provided, then unregister an event `listener` for an `event`, from a `PostIt` instance (`id`).
 
 |   Param    |    Type    |
 |:----------:|:----------:|
@@ -117,18 +118,16 @@ Unregisters (all | explicit) event listeners.
 | [listener] | `function` |
 
 ```javascript
-// Unregister all `bar` listeners.
 PostIt.off('baz', 'bar');
 
 function bazBar() {}
 
-// Unregister an explicit `bar` listener.
 PostIt.off('baz', 'bar', bazBar);
 ```
 
 ### .emit(id, event, target, message, origin) => `object`
 
-Emits explicit `message` events, using the client's `.postMessage` emitter.
+Emits an `event` to registered event listeners for an `event`, to a `PostIt` instance (`id`).
 
 |  Param  |            Type           |
 |:-------:|:-------------------------:|

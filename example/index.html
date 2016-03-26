@@ -23,21 +23,20 @@
 				var postItElem = document.getElementById('postIt');
 
 				PostIt
-					// Create a new `PostIt` instance, in `Factory`.
+					// Creates and manages a `foo` instance.
 					.add('foo')
 
-					// Subscribe to `foo`'s `bar` event.
+					// Registers an event listener for a `bar` event, to a `foo` instance.
 					.on('foo', 'bar', function(event) {
 						postItElem.innerHTML = event.dataParsed.message;
 
-						// Emit `foo`'s `baz` event.
+						// Emits a `baz` event to registered event listeners for an `baz` event, to a `foo` instance.
 						PostIt.emit('foo', 'baz', event.source, { message: 'Message from `index.html`' }, '*');
 					})
 
-					// Subscribe to all `.postMessage` events.
-					// Useful for unwrapped, `.postMessage` events.
+					// Registers an event `listener` for all `foo` instance events, to a `foo` instance.
 					.on('foo', '*', function(event) {
-						console.log('All `.postMessage` events');
+						console.log('All `.postMessage` events', event.dataParsed);
 					});
 
 				postItElem.addEventListener('click', function() {
