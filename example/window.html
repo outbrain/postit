@@ -21,16 +21,16 @@
 				var postItElem = document.getElementById('postIt');
 
 				PostIt
-					// Creates and manages a `foo` instance.
+					// Creates and manages a `PostIt` instance.
 					.add('foo')
 
-					// Registers an event listener for a `baz` event, to a `foo` instance.
+					// Registers a `listener` to a `PostIt` instance, for a given `event`.
 					.on('foo', 'baz', function(event) {
 						postItElem.innerHTML = event.dataParsed.message;
 					});
 
 				postItElem.addEventListener('click', function() {
-					// Emits a `bar` event to registered event listeners for an `bar` event, to a `foo` instance.
+					// Emits an `event` to all listeners registered to a `PostIt` instance, for a given `event`.
 					PostIt.emit('foo', 'bar', window.parent.opener, { message: 'Message from `window.html`' }, '*');
 				}, false);
 			})();

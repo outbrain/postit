@@ -92,7 +92,7 @@ PostIt.getAll();
 
 ### .on(id, event, listener) => `object`
 
-Registers an event `listener` for an `event`, to a `PostIt` instance (`id`).
+Registers a `listener` to a `PostIt` instance (`id`), for a given `event`.
 
 |   Param  |    Type    |
 |:--------:|:----------:|
@@ -102,14 +102,14 @@ Registers an event `listener` for an `event`, to a `PostIt` instance (`id`).
 
 ```javascript
 PostIt.on('baz', 'bar', function(event) {
-	//
+	// ...
 });
 ```
 
 ### .off(id, event[, listener]) => `object`
 
-- If a `listener` is not provided, then unregister all event listeners for an `event`, from a `PostIt` instance (`id`).
-- If a `listener` is provided, then unregister an event `listener` for an `event`, from a `PostIt` instance (`id`).
+- If a `listener` is not provided, then unregister all listeners from a `PostIt` instance (`id`), for a given `event`.
+- If a `listener` is provided, then unregister a `listener` from a `PostIt` instance (`id`), for a given `event`.
 
 |   Param    |    Type    |
 |:----------:|:----------:|
@@ -127,7 +127,8 @@ PostIt.off('baz', 'bar', bazBar);
 
 ### .emit(id, event, target, message, origin) => `object`
 
-Emits an `event` to registered event listeners for an `event`, to a `PostIt` instance (`id`).
+- If `event` is an asterisk (\*), then emit an `event` to all listeners registered to a `PostIt` instance (`id`), for all given `event`s.
+- If `event` is not an asterisk (\*), then emit an `event` to all listeners registered to a `PostIt` instance (`id`), for a given `event`.
 
 |  Param  |            Type           |
 |:-------:|:-------------------------:|
