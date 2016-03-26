@@ -1,3 +1,17 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/outbrain/postit/compare/v1.0.1...v1.1.0) (2016-03-26)
+
+
+### Docs
+
+* Update `manager`, `/example/*.html` and `README` documentation. ([fdf39ce29fbf3267ed45fe09997cb7d576ecf3da](https://github.com/outbrain/postit/commit/fdf39ce29fbf3267ed45fe09997cb7d576ecf3da))
+
+### Update
+
+* Remove a hidden feature that enables asterisk (*) events, to listen to all registered events of any instance (`id`). ([22474ef21a8f3e04c9e4bfa4638cadd4e80f3607](https://github.com/outbrain/postit/commit/22474ef21a8f3e04c9e4bfa4638cadd4e80f3607))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/outbrain/postit/compare/v1.0.0...v1.0.1) (2016-03-21)
 

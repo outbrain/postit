@@ -20,7 +20,7 @@ PostIt Module.
 
 <a name="PostIt+on"></a>
 ### postIt.on(event, listener) ⇒ <code>object</code>
-Registers an explicit event listener.
+Registers an event `listener` for an `event`, to a `PostIt` instance.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  
@@ -32,7 +32,8 @@ Registers an explicit event listener.
 
 <a name="PostIt+off"></a>
 ### postIt.off(event, [listener]) ⇒ <code>object</code>
-Unregisters (all | explicit) event listeners.
+- If a `listener` is not provided, then unregister all event listeners for an `event`, from a `PostIt` instance.
+- If a `listener` is provided, then unregister an event `listener` for an `event`, from a `PostIt` instance.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  
@@ -44,7 +45,7 @@ Unregisters (all | explicit) event listeners.
 
 <a name="PostIt+emit"></a>
 ### postIt.emit(event, target, message, origin) ⇒ <code>object</code>
-Emits explicit `message` events, using the client's `.postMessage` emitter.
+Emits an `event` to registered event listeners for an `event`, to a `PostIt` instance.
 
 **Kind**: instance method of <code>[PostIt](#PostIt)</code>  
 **Access:** public  

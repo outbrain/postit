@@ -19,7 +19,7 @@ Manager Module.
 
 <a name="Manager.add"></a>
 ### Manager.add(id) ⇒ <code>object</code>
-Creates and manages a new `PostIt` instance.
+Creates and manages a `PostIt` instance (`id`).
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
@@ -30,7 +30,7 @@ Creates and manages a new `PostIt` instance.
 
 <a name="Manager.remove"></a>
 ### Manager.remove(id) ⇒ <code>object</code>
-Removes an explicit `PostIt` instance.
+Removes a `PostIt` instance (`id`).
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
@@ -53,7 +53,7 @@ Returns the length of all `PostIt` instances.
 **Access:** public  
 <a name="Manager.get"></a>
 ### Manager.get(id) ⇒ <code>object</code> &#124; <code>void</code>
-Gets an explicit `PostIt` instance.
+Gets a `PostIt` instance (`id`).
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 
