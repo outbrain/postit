@@ -1,3 +1,17 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/outbrain/postit/compare/v1.1.1...v1.1.2) (2016-03-30)
+
+
+### Docs
+
+* Update `README` and `/example/index.html` documentation. ([fb091c987df3c7686efd8e854358f0dd7ab3a1ea](https://github.com/outbrain/postit/commit/fb091c987df3c7686efd8e854358f0dd7ab3a1ea))
+
+### Upgrade
+
+* Update `package` dependencies. ([89b1bf5fe291aaaf71a91795b14ecab1f21ab04f](https://github.com/outbrain/postit/commit/89b1bf5fe291aaaf71a91795b14ecab1f21ab04f))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/outbrain/postit/compare/v1.1.0...v1.1.1) (2016-03-26)
 

@@ -1,4 +1,5 @@
 <a name="Factory"></a>
+
 ## Factory
 Factory Module.
 
@@ -12,6 +13,7 @@ Factory Module.
     * [.getAll()](#Factory.getAll) ⇒ <code>object</code>
 
 <a name="Factory.add"></a>
+
 ### Factory.add(id) ⇒ <code>object</code>
 Creates a `PostIt` factory (Singleton).
 
@@ -23,6 +25,7 @@ Creates a `PostIt` factory (Singleton).
 | id | <code>string</code> | 
 
 <a name="Factory.remove"></a>
+
 ### Factory.remove(id) ⇒ <code>void</code>
 Removes an explicit `PostIt`, factory instance.
 
@@ -34,6 +37,7 @@ Removes an explicit `PostIt`, factory instance.
 | id | <code>string</code> | 
 
 <a name="Factory.get"></a>
+
 ### Factory.get(id) ⇒ <code>object</code>
 Gets an explicit `PostIt`, factory instance.
 
@@ -45,6 +49,7 @@ Gets an explicit `PostIt`, factory instance.
 | id | <code>string</code> | 
 
 <a name="Factory.getAll"></a>
+
 ### Factory.getAll() ⇒ <code>object</code>
 Gets all `PostIt`, factory instances.
 

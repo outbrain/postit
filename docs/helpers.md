@@ -1,4 +1,5 @@
 <a name="helpers"></a>
+
 ## helpers
 Helpers Module.
 
@@ -11,6 +12,7 @@ Helpers Module.
     * [.openWindow(url, name, options)](#helpers.openWindow) ⇒ <code>object</code>
 
 <a name="helpers.serialize"></a>
+
 ### helpers.serialize(params) ⇒ <code>string</code>
 Serializes an object into a formatted string.
 
@@ -22,6 +24,7 @@ Serializes an object into a formatted string.
 | params | <code>object</code> | 
 
 <a name="helpers.shallowMerge"></a>
+
 ### helpers.shallowMerge(destination, source) ⇒ <code>object</code>
 Merges a shallow `source` object into the `destination` object.
 
@@ -34,6 +37,7 @@ Merges a shallow `source` object into the `destination` object.
 | source | <code>object</code> | 
 
 <a name="helpers.openWindow"></a>
+
 ### helpers.openWindow(url, name, options) ⇒ <code>object</code>
 Loads a resource into a new browsing context (`window`).
 

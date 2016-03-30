@@ -1,4 +1,5 @@
 <a name="Manager"></a>
+
 ## Manager
 Manager Module.
 
@@ -18,6 +19,7 @@ Manager Module.
     * [.openWindow(url, name, options)](#Manager.openWindow)
 
 <a name="Manager.add"></a>
+
 ### Manager.add(id) ⇒ <code>object</code>
 Creates and manages a `PostIt` instance (`id`).
 
@@ -29,6 +31,7 @@ Creates and manages a `PostIt` instance (`id`).
 | id | <code>string</code> | 
 
 <a name="Manager.remove"></a>
+
 ### Manager.remove(id) ⇒ <code>object</code>
 Removes a `PostIt` instance (`id`).
 
@@ -40,18 +43,21 @@ Removes a `PostIt` instance (`id`).
 | id | <code>string</code> | 
 
 <a name="Manager.removeAll"></a>
+
 ### Manager.removeAll() ⇒ <code>object</code>
 Removes all `PostIt` instances.
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
 <a name="Manager.size"></a>
+
 ### Manager.size() ⇒ <code>number</code>
 Returns the length of all `PostIt` instances.
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
 <a name="Manager.get"></a>
+
 ### Manager.get(id) ⇒ <code>object</code> &#124; <code>void</code>
 Gets a `PostIt` instance (`id`).
 
@@ -62,11 +68,13 @@ Gets a `PostIt` instance (`id`).
 | id | <code>string</code> | 
 
 <a name="Manager.getAll"></a>
+
 ### Manager.getAll() ⇒ <code>object</code>
 Gets all `PostIt` instances.
 
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 <a name="Manager.on"></a>
+
 ### Manager.on(id, event, listener) ⇒ <code>object</code>
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
@@ -79,6 +87,7 @@ Gets all `PostIt` instances.
 | listener | <code>function</code> | 
 
 <a name="Manager.off"></a>
+
 ### Manager.off(id, event, [listener]) ⇒ <code>object</code>
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
@@ -91,6 +100,7 @@ Gets all `PostIt` instances.
 | [listener] | <code>function</code> | 
 
 <a name="Manager.emit"></a>
+
 ### Manager.emit(id, event, target, message, origin) ⇒ <code>object</code>
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
@@ -105,6 +115,7 @@ Gets all `PostIt` instances.
 | origin | <code>string</code> | 
 
 <a name="Manager.openWindow"></a>
+
 ### Manager.openWindow(url, name, options)
 **Kind**: static method of <code>[Manager](#Manager)</code>  
 **Access:** public  
