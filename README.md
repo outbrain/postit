@@ -16,8 +16,6 @@ $ npm install --save postit-js
 
 ### HTML Script Element
 
-[`path/to/postit.js`](dist/postit.js)
-
 ```html
 <script src="path/to/postit.js"></script>
 ```
