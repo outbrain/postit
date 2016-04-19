@@ -1,3 +1,13 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/outbrain/postit/compare/v1.1.2...v1.1.3) (2016-04-19)
+
+
+### Docs
+
+* Update `CONTRIBUTOR` documentation. ([cc2af21dd01baffce768b33853a3a1ff09147eeb](https://github.com/outbrain/postit/commit/cc2af21dd01baffce768b33853a3a1ff09147eeb))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/outbrain/postit/compare/v1.1.1...v1.1.2) (2016-03-30)
 
