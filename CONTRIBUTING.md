@@ -2,11 +2,11 @@
 
 ## Working with a Fork
 
-The first step to contributing fixes and improvements to `postit`, is [forking the repository](https://help.github.com/articles/fork-a-repo) into your own `GitHub` account. Make sure to [follow the instructions](https://help.github.com/articles/fork-a-repo) on how to 'Configure Remotes' and 'Pull in upstream changes' -- you will need to keep your fork in sync with changes that happen in the official repository.
+The first step to contributing fixes and improvements to `PostIt`, is [forking the repository](https://help.github.com/articles/fork-a-repo) into your own `GitHub` account. Make sure to [follow the instructions](https://help.github.com/articles/fork-a-repo) on how to 'Configure Remotes' and 'Pull in upstream changes' -- you will need to keep your fork in sync with changes that happen in the official repository.
 
 ## Never Commit on Master
 
-When working on a fork, always think of your master branch as a 'landing place' for upstream changes. Only make commits to topic branches. Only `postit` maintainers, have the authority to merge in upstream commits.
+When working on a fork, always think of your master branch as a 'landing place' for upstream changes. Only make commits to topic branches. Only `PostIt` maintainers, have the authority to merge in upstream commits.
 
 ## Commit Message Guidelines
 
@@ -41,8 +41,8 @@ The commit message format, is important, given that the `CHANGELOG` is generated
 
 ## Submit a Pull Request
 
-When a commit is ready to be reviewed by a `postit` maintainer, submit a [pull request](https://help.github.com/articles/creating-a-pull-request).
-Push the topic branch to your fork and then use one of the several options in `GitHub`'s interface to initiate the request. Please do not commit `docs` and/or `dist` files; `postit` maintainers will address such, when cutting a new release.
+When a commit is ready to be reviewed by a `PostIt` maintainer, submit a [pull request](https://help.github.com/articles/creating-a-pull-request).
+Push the topic branch to your fork and then use one of the several options in `GitHub`'s interface to initiate the request. Please do not commit `docs` and/or `dist` files; `PostIt` maintainers will address such, when cutting a new release.
 
 Unless a rather minor change, has been made, it is generally a good practice, to file an issue, explaining your idea, before writing code or submitting a pull request -- especially when introducing new features.
 
