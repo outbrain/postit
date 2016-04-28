@@ -1,3 +1,21 @@
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/outbrain/postit/compare/v1.1.3...v1.1.4) (2016-04-28)
+
+
+### Build
+
+* Fix unit test spacing. ([7c00353921d57de02f6aa2d089a3aa4c8c5f4269](https://github.com/outbrain/postit/commit/7c00353921d57de02f6aa2d089a3aa4c8c5f4269))
+
+### Docs
+
+* Update `CONTRIBUTING` documentation. ([9cba3ef6d054e2b8118ca387fe25a0ffb11f41f0](https://github.com/outbrain/postit/commit/9cba3ef6d054e2b8118ca387fe25a0ffb11f41f0))
+
+### Upgrade
+
+* Update `package` dependencies. ([74eeac68564203ed0594316ab2026b43dd08d9d6](https://github.com/outbrain/postit/commit/74eeac68564203ed0594316ab2026b43dd08d9d6))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/outbrain/postit/compare/v1.1.2...v1.1.3) (2016-04-19)
 
