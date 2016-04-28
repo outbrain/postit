@@ -6,13 +6,13 @@ The first step to contributing fixes and improvements to `PostIt`, is [forking t
 
 ## Never Commit on Master
 
-When working on a fork, always think of your master branch as a 'landing place' for upstream changes. Only make commits to topic branches. Only `PostIt` maintainers, have the authority to merge in upstream commits.
+When working on a fork, always think of your master branch as a 'landing place' for upstream changes. Only make commits to topic branches. Only `PostIt` maintainers have the authority to merge in upstream commits.
 
 ## Commit Message Guidelines
 
 Commit messages are written in a simple format, which clearly describes the purpose of a change.
 
-Commit message summaries, must follow the following format:
+Commit message summaries must follow the following format:
 
 ```
 Type: message (fixes|refs #number)
@@ -28,29 +28,29 @@ Type: message (fixes|refs #number)
 * `New` - New feature.
 * `Upgrade` - Dependency upgrade.
 
-The message should succinctly summarize, the change. In addition, an issue number, must be added, at the end, e.g.,
+The message should succinctly summarize the change. In addition, an issue number must be added at the end, e.g.,
 
 ```
 Build: Allow revert commits in commit messages. (refs #734)
 Fix: Properly parse and add response Headers to Response. (fixes #840)
 ```
 
-It is important to note, that if a commit does not completely fix a given issue, then, use `(refs #1234)` instead of `(fixes #1234)`.
+It is important to note, that if a commit does not completely fix a given issue, then use `(refs #1234)` instead of `(fixes #1234)`.
 
-The commit message format, is important, given that the `CHANGELOG` is generated based on said conventions.
+The commit message format is important, given that the `CHANGELOG` is generated based on said conventions.
 
 ## Submit a Pull Request
 
 When a commit is ready to be reviewed by a `PostIt` maintainer, submit a [pull request](https://help.github.com/articles/creating-a-pull-request).
 Push the topic branch to your fork and then use one of the several options in `GitHub`'s interface to initiate the request. Please do not commit `docs` and/or `dist` files; `PostIt` maintainers will address such, when cutting a new release.
 
-Unless a rather minor change, has been made, it is generally a good practice, to file an issue, explaining your idea, before writing code or submitting a pull request -- especially when introducing new features.
+Unless a rather minor change has been made, it is generally a good practice to file an issue explaining your idea, before writing code or submitting a pull request -- especially when introducing new features.
 
 ## Gulp Tasks
 
 ### Testing/Linting
 
-Run unit tests and/or linting.
+Run unit tests/linting.
 
 ```bash
 # Lint and Unit Tests
@@ -91,7 +91,7 @@ For more information on SemVer, please visit <http://semver.org/>.
 | Safari            | Latest  |
 | Internet Explorer | 9+ *    |
 
-*= `PostIt.openWindow` does not work in IE, cross-domain, whilst using `.postMessage`; however, `iframe` support is available.
+*= `PostIt.openWindow` does not work in IE (cross-domain), whilst using `.postMessage`; however, `iframe` support is available.
 
 ## Coding Guidelines
 
