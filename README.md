@@ -2,7 +2,7 @@
 
 An elegant wrapper for [`.postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-![Unit Test Coverage](http://img.shields.io/badge/coverage-99.32%-green.svg?style=flat)
+![Unit Test Coverage](http://img.shields.io/badge/coverage-99.33%-green.svg?style=flat)
 
 ## Installation
 
