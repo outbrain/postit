@@ -1,3 +1,17 @@
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/outbrain/postit/compare/v1.1.4...v1.1.5) (2016-05-13)
+
+
+### Docs
+
+* Update `README` documentation. ([072520acd3690b356abb50c0b1af62f8b206cab9](https://github.com/outbrain/postit/commit/072520acd3690b356abb50c0b1af62f8b206cab9))
+
+### Upgrade
+
+* Update `package` dependencies. ([0080460365ff6054db0910ce1e58dd567c2ef902](https://github.com/outbrain/postit/commit/0080460365ff6054db0910ce1e58dd567c2ef902))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/outbrain/postit/compare/v1.1.3...v1.1.4) (2016-04-28)
 
