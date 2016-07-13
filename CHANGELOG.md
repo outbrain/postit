@@ -1,3 +1,13 @@
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/outbrain/postit/compare/v1.1.6...v1.1.7) (2016-07-13)
+
+
+### Docs
+
+* Update `README` documentation to display the `coverage` badge. ([47d5ba6f51e80c9ec61f520526b09c30ab5fd59d](https://github.com/outbrain/postit/commit/47d5ba6f51e80c9ec61f520526b09c30ab5fd59d))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/outbrain/postit/compare/v1.1.5...v1.1.6) (2016-05-25)
 
