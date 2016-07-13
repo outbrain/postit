@@ -2,7 +2,7 @@
 
 An elegant wrapper for [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-![Unit Test Coverage](http://img.shields.io/badge/coverage-99.33%-green.svg?style=flat)
+![Unit Test Coverage](https://cdn.rawgit.com/outbrain/postit/master/coverage.svg)
 [![Known Vulnerabilities](https://snyk.io/test/npm/postit-js/badge.svg)](https://snyk.io/test/npm/postit-js)
 
 ## Installation
